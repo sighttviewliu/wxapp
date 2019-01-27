@@ -1,5 +1,42 @@
 {
   "pages": [
-    "mypages/index/index"
-  ]
+    "mypages/index/index",
+    "mypages/page2/mypagefilename",
+    "otherpages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "Demo",
+    "navigationBarBackgroundColor": "#ff83fa",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ff83fa",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "iconpath": "images/a.png",
+        "selectedIconPath": "images/b.png",
+        "pagePath": "mypages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconpath": "images/a.png",
+        "selectedIconPath": "images/b.png",
+        "pagePath": "otherpages/index/index",
+        "text": "其他"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000
+  },
+  "debug": true,
+  "navigateToMiniProgramAppIdList": ["wxe5f52902cf4de896"]
 }

@@ -1,20 +1,10 @@
-// mypages/index/index.js
+// otherpages/index/index.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    count: 0
-  },
-
-  countClick: function() {
-    this.setData({
-      count: this.data.count + 1
-    });
-  },
-
-  onPullDownRefresh: function() {
 
   },
 
