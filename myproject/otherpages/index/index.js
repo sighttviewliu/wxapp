@@ -5,14 +5,14 @@ Page({
    * Page initial data
    */
   data: {
-
+    aaaa: "aaaaaaaa"
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    console.log(getApp().bbbb.dddd.eeee);
   },
 
   /**
@@ -26,7 +26,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    console.log(this.data.aaaa);
   },
 
   /**

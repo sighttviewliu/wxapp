@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "zhangsan",
+  "backgroundColor": "#efefef",
+  "backgroundTextStyle": "light"
 }

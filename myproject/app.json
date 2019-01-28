@@ -26,6 +26,12 @@
       {
         "iconpath": "images/a.png",
         "selectedIconPath": "images/b.png",
+        "pagePath": "mypages/page2/mypagefilename",
+        "text": "中间"
+      },
+      {
+        "iconpath": "images/a.png",
+        "selectedIconPath": "images/b.png",
         "pagePath": "otherpages/index/index",
         "text": "其他"
       }
