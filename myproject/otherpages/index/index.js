@@ -27,6 +27,10 @@ Page({
    */
   onShow: function () {
     console.log(this.data.aaaa);
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: '#ffffff',
+    });
   },
 
   /**
@@ -47,7 +51,9 @@ Page({
    * Page event handler function--Called when user drop down
    */
   onPullDownRefresh: function () {
-
+    setTimeout((function callback() {
+    }).bind(this), 2*1000);
+    wx.stopPullDownRefresh();
   },
 
   /**

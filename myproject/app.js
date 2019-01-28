@@ -1,4 +1,8 @@
 var global = "myAPPPPPPP";
+var global_1 = {
+  x: 1,
+  y: 2
+}
 
 App({
     onLaunch: function() {
