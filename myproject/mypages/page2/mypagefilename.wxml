@@ -1,3 +1,49 @@
 <!--mypages/page2/mypagefilename.wxml-->
 <text>mypages/page2/mypagefilename.wxml</text>
 <view bindtap="countClick">我是index页面，你点击了{{count}}次</view>
+
+<!-- <view>{{content}}</view>
+<view hover-class='{{border}}'>作为组件属性</view>
+<view wx:if='{{showContent}}'>作为控制属性</view>
+<view>{{2}}</view>
+<checkbox checked='{{false}}'>字面量属性</checkbox> -->
+
+<view>{{showContent ? '显示文本' : '不显示文本'}} </view>
+<view>{{num1 + num2}} + 1 + {{num3}} = ? </view>
+<view>{{"name: " + name}} </view>
+<view>{{num3 > 0}} </view>
+<view>{{myObject.age}} {{myArray[1]}} </view>
+
+<view>{{[myObject.age, 1, 2, 'zhangsan']}}</view>
+<template data='{{name: num1, name: num2}}'></template>
+<template data='{{...myObject, key5: 5, ...myObject, key6: 6}}'></template>
+<template data='{{num1, num2}}'></template>
+<template data='{{...myObject, age: 3}}'></template>
+
+<view wx:if="{{false}}">1</view>
+<view wx:elif="{{false}}">2</view>
+<view wx:else>3</view>
+
+<block wx:if='{{false}}'>
+<view>123</view>
+</block>
+<block wx:elif='{{false}}'>
+<view>456</view>
+</block>
+<block wx:else>
+<view>789</view>
+</block>
+
+<view hidden='{{true}}'>123123123123</view>
+
+<view wx:for='{{myArray}}'>xxx</view>
+
+<!-- <view wx:for='{{mmmm}}' wx:for-index='ind' wx:for-item='itm'>
+{{ind}} : {{itm.name}}
+</view> -->
+
+<view wx:for='{{mxmx}}' wx:for-index='ind' wx:for-item='itm'>
+<block wx:for='{{itm}}' wx:for-index='subind' wx:for-item='subitm'>
+{{subitm}}
+</block>
+</view>

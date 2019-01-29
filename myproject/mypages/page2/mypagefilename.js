@@ -4,9 +4,32 @@ Page({
   /**
    * Page initial data
    */
-  data: {
-
+  // data: {
+  //   border: 'solid 1px #000',
+  //   id: 1,
+  //   content: '内容',
+  //   showContent: true
+  // },
+data: {
+  showContent: false,
+  num1: 1,
+  num2: 2,
+  num3: 3,
+  name: 'weixin',
+  myObject: {
+    age: 2
   },
+  myArray: ['arr1', 'arr2'],
+  mmmm: [
+    {name: 1},
+    {name: 2}
+  ],
+  mxmx: [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+  ]
+},
 
   countClick: function () {
     console.log("我的苍天");

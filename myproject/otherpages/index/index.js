@@ -39,7 +39,7 @@ Page({
   addNewData: function() {
     this.setData({
       "newField.newFieldText": "add new data"
-    })
+    });
   },
 
   /**
