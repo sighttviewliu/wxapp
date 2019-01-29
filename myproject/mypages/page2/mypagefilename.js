@@ -11,6 +11,7 @@ Page({
   //   showContent: true
   // },
 data: {
+  content: 123123123123,
   showContent: false,
   num1: 1,
   num2: 2,
@@ -28,11 +29,25 @@ data: {
     [1,2,3],
     [4,5,6],
     [7,8,9]
-  ]
+  ],
+  whichtemp: "zhangsan"
 },
 
   countClick: function () {
     console.log("我的苍天");
+  },
+
+tap1: function() {
+  console.log("-----------tap1");
+},
+
+  tap2: function () {
+    console.log("-----------tap2");
+  },
+
+  tap3: function (e) {
+    console.log("-----------tap3");
+    console.log(e.target.dataset);
   },
 
   /**

@@ -12,3 +12,17 @@
 
 <view>{{newField.newFieldText}}</view>
 <button bindtap='addNewData'>添加新字段</button>
+
+<!-- 使用 -->
+<template name='myView'>
+<view>ABC</view>
+<view>XYZ</view>
+</template>
+
+<template name='myView_another'>
+<view>UUU</view>
+<view>MMM</view>
+</template>
+
+<template is='myView' data="" />
+

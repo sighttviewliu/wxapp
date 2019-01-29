@@ -47,3 +47,31 @@
 {{subitm}}
 </block>
 </view>
+
+
+<view>-------------------------</view>
+<template name='zhangsan'>
+<view>123</view>
+<view>{{content}}</view>
+<view>{{name}}</view>
+<view>{{myObject.age}}</view>
+</template>
+
+<!-- <template is='zhangsan' data="{{content: '内容', name, myObject}}"/> -->
+
+<template name='lisi'>
+<view>ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ</view>
+<template is='zhangsan' data="{{content: '内容', name, myObject}}"/>
+</template>
+
+<template is='{{whichtemp}}' data="{{content: '内容', name, myObject}}"/>
+
+<view bindtap='tap1'>
+tap1
+<view catchtap='tap2'>
+tap2
+<view bindtap='tap3' data-a-b='weixinXXXX' data-a-c='laoliu'>
+tap3
+</view>
+</view>
+</view>

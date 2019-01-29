@@ -1,3 +1,10 @@
 <!--mypages/index/index.wxml-->
 <text>mypages/index/index.wxml</text>
 <view bindtap="countClick">我是index页面，你点击了{{count}}次</view>
+
+<!-- 引入 -->
+<import src='../../otherpages/index/index.wxml' />
+<template is='myView' data=""></template>
+
+<!-- 引入 -->
+<include src='../../otherpages/index/index.wxml' />
