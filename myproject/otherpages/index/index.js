@@ -5,7 +5,41 @@ Page({
    * Page initial data
    */
   data: {
-    aaaa: "aaaaaaaa"
+    text: "normal data",
+    object: {
+      subObject: {
+        objectText: "object data"
+      }
+    },
+    array: [
+      {
+        arrayText: "array data"
+      }
+    ]
+  },
+
+  changeText: function() {
+    this.setData({
+      text: "new normal data"
+    });
+  },
+
+  changeObjectText: function() {
+    this.setData({
+      "object.subObject.objectText": "new object data"
+    });
+  },
+
+  changeArrayText: function() {
+    this.setData({
+      "array[0].arrayText": "new array data"
+    });
+  },
+
+  addNewData: function() {
+    this.setData({
+      "newField.newFieldText": "add new data"
+    })
   },
 
   /**

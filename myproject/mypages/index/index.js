@@ -1,4 +1,9 @@
 // mypages/index/index.js
+
+var app = getApp();
+var pages = getCurrentPages();
+var currentPage = pages[pages.length - 1];
+
 Page({
 
   /**

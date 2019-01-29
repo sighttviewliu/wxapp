@@ -8,6 +8,10 @@ Page({
 
   },
 
+  countClick: function () {
+    console.log("我的苍天");
+  },
+
   /**
    * Lifecycle function--Called when page load
    */

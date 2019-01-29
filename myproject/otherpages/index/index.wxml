@@ -1,2 +1,14 @@
 <!--otherpages/index/index.wxml-->
 <text>otherpages/index/index.wxml</text>
+
+<view>{{text}}</view>
+<button bindtap='changeText'>修改普通数据</button>
+
+<view>{{object.subObject.objectText}}</view>
+<button bindtap='changeObjectText'>修改对象数据</button>
+
+<view>{{array[0].arrayText}}</view>
+<button bindtap='changeArrayText'>修改数组数据</button>
+
+<view>{{newField.newFieldText}}</view>
+<button bindtap='addNewData'>添加新字段</button>
