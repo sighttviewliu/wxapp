@@ -4,6 +4,9 @@ var app = getApp();
 var pages = getCurrentPages();
 var currentPage = pages[pages.length - 1];
 
+
+var myMod = require('mod.js');
+
 Page({
 
   /**
@@ -28,6 +31,7 @@ Page({
    */
   onLoad: function (options) {
     console.log(getApp().bbbb.dddd.eeee);
+
   },
 
   /**
@@ -41,7 +45,8 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    myMod.run('zhangsan');
+    myMod.walk('lisi');
   },
 
   /**

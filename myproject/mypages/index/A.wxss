@@ -1,0 +1,3 @@
+.common-view {
+  border: solid 5rpx #f1f;
+}

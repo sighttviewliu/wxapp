@@ -1,1 +1,32 @@
 /* mypages/index/index.wxss */
+.myClass__ {
+  border: solid 5px #3ef;
+}
+
+view.myClass {
+  border: solid 5rpx #3ef;
+}
+view.myClass_ {
+  border: solid 5rpx #f1f;
+}
+view.my_Class_ {
+  background-color: #f1f;
+}
+
+view .myClass {
+  border: solid 5rpx #1f1;
+}
+
+.myCCC checkbox,
+.myCCC radiobox {
+  border: solid 5rpx #13f;
+}
+
+view.myClass::after {
+  content: 'new content';
+}
+
+@import "A.wxss";
+.pager-contenter {
+  padding: 10rpx;
+}

@@ -8,3 +8,17 @@
 
 <!-- 引入 -->
 <include src='../../otherpages/index/index.wxml' />
+
+<checkbox class='myClass__'>123123</checkbox>
+<view class='myClass'>123123</view>
+<view class='myClass'>123123
+<view class='myClass'>UUUUUUU</view></view>
+<view class='myClass'>123123</view>
+
+<radio class='myCCC'>OOOO</radio>
+<checkbox class='myCCC'>[][][][]</checkbox>
+
+<view style='border: solid 5rpx #fff;  background-color: #eee'>PPP</view>
+
+<view class='myClass my_Class_'>PPP</view>
+<view class='common-view'>OPQRST</view>
