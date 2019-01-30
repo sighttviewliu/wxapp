@@ -2,7 +2,8 @@
   "pages": [
     "mypages/index/index",
     "mypages/page2/mypagefilename",
-    "otherpages/index/index"
+    "otherpages/index/index",
+    "mypages/here/here"
   ],
   "window": {
     "navigationBarTitleText": "Demo",
@@ -34,6 +35,12 @@
         "selectedIconPath": "images/b.png",
         "pagePath": "otherpages/index/index",
         "text": "其他"
+      },
+      {
+        "iconpath": "images/a.png",
+        "selectedIconPath": "images/b.png",
+        "pagePath": "mypages/here/here",
+        "text": "这里"
       }
     ]
   },
@@ -44,5 +51,7 @@
     "uploadFile": 10000
   },
   "debug": true,
-  "navigateToMiniProgramAppIdList": ["wxe5f52902cf4de896"]
+  "navigateToMiniProgramAppIdList": [
+    "wxe5f52902cf4de896"
+  ]
 }
