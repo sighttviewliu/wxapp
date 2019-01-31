@@ -1,1 +1,37 @@
 /* mypages/here.wxss */
+/* .clearfix::after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: '1111';
+} */
+
+.mybox {
+  height: 800rpx;
+  border: solid 1rpx #f1f;
+  display: flex;
+  /*flex-direction: row;*/
+  flex-wrap: wrap;
+  /*flex-flow: row wrap;*/
+  /*justify-content: space-around;*/
+  /*align-items: stretch;*/
+  align-content: stretch;
+}
+
+
+.myitem {
+  border: solid 1rpx #1f1;
+  margin: 10rpx;
+  order: 0;
+  /* flex-shrink: 2; */
+}
+
+.myitem_1 {
+  border: solid 1rpx #1f1;
+  margin: 10rpx;
+  order: 0;
+  /*flex-grow: 2;*/
+  /* flex-basis: auto; */
+  flex: 1 1 auto;
+  align-self: stretch;
+}

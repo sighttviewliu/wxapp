@@ -1,5 +1,5 @@
 <!--mypages/here.wxml-->
-<view style="border: solid 1rpx;">第一块级别元素</view>
+<!-- <view style="border: solid 1rpx;">第一块级别元素</view>
 <view style="border: solid 10rpx; margin: 10rpx; padding: 10rpx">第二块级别元素</view>
 <view style='border: solid 1rpx; width: 200rpx;'>第三块级别元素</view>
 <view style='margin-top: 10rpx; border: solid 100rpx'>
@@ -21,4 +21,85 @@
 <view style='border: solid 10rpx; width: 100rpx; height: 100rpx; margin: 10rpx; padding: 10rpx; display: inline-block'>行内</view></view>
 
 文本文本文本文本文本文本文本文本文本文本文本文本<view>文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本<view style='display: block; float: left; border: solid 1rpx; margin: 20rpx;'>我是流动的块元素</view>
-</view>文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本
+</view>文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本 -->
+
+<!-- <view style='border: solid 1rpx;'>
+<view>其他元素</view>
+<view>不加float框</view>
+</view>
+
+<view style='border: solid 1rpx;'>
+<view>其他元素</view>
+<view style='float: left;'>浮动特性的框</view>
+<view style='clear: left;'>清除左侧元素的浮动特性</view>
+</view>
+<view style='border: solid 1rpx; margin-top: 10rpx;'>
+<view>其他元素</view>
+<view style='float: left;'>浮动框</view>
+<view>不清楚浮动的普通元素</view>
+</view> -->
+
+
+<!-- <view style='border: solid 1rpx;'>
+<view>其他元素</view>
+<view style='float: left'>浮动框</view>
+<view style='clear: both; height: 0;'></view>
+</view>
+
+<view style='border: solid 1rpx; margin-top: 10rpx;' class='clearfix'>
+<view>其他元素</view>
+<view style='float: left'>浮动框</view>
+</view> -->
+
+<!-- <view style='border: solid 1rpx;margin-top: 10rpx;'>
+<view>其他元素</view>
+<view style='float: left'>浮动框</view>
+</view> -->
+
+
+<!-- <view style='border: solid 1rpx;'>
+文案文案
+<text style='position: relative; top: 10rpx; left: 20rpx'>relative</text>
+文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案
+</view>
+
+<view style='border: solid 1rpx;'>
+<text>我是text</text>
+<text style='position: relative; top: 100rpx; left: 100rpx'>relative</text>
+</view>
+
+<view style='border: solid 1rpx;'>
+<text>我是text</text>
+<text style='position: relative; top: 10rpx; left: 10rpx'>relative</text>
+</view> -->
+
+<!-- <view style='border: solid 1rpx; position: absolute; height: 300rpx;'>
+文案文案
+<text style='position: absolute; left: 10rpx; bottom: 10rpx'>absolute</text>
+文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案
+</view> -->
+
+<!-- 
+<view style='border: solid 1rpx; height: 300rpx;'>
+文案文案
+<text style='position: absolute; left: 10rpx; bottom: 10rpx'>absolute</text>
+文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案
+</view> -->
+
+<!-- <view style='border: solid 1rpx;'>
+文案文案
+<text style='position: fixed; right: 10rpx; bottom: 10rpx; border: solid 1rpx;'>fixed</text>
+文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</view> -->
+
+<view class='mybox'>
+<view class='myitem_1'>张三</view>
+<view class='myitem_1'>李四</view>
+<view class='myitem_1'>王五</view>
+<view class='myitem'>666666</view>
+<view class='myitem'>777777</view>
+<view class='myitem'>888888</view>
+<view class='myitem'>999999</view>
+<view class='myitem'>000000</view>
+<view class='myitem'>111111</view>
+<view class='myitem'>222222</view>
+</view>
