@@ -1,13 +1,14 @@
-<!--mypages/index/index.wxml-->
-<text>mypages/index/index.wxml</text>
-<view bindtap="countClick">我是index页面，你点击了{{count}}次</view>
+<!-- mypages/index/index.wxml -->
+
+<!-- <text>mypages/index/index.wxml</text>
+<view bindtap="countClick">我是index页面，你点击了{{count}}次</view> -->
 
 <!-- 引入 -->
-<import src='../../otherpages/index/index.wxml' />
-<template is='myView' data=""></template>
+<!-- <import src='../../otherpages/index/index.wxml' />
+<template is='myView' data=""></template> -->
 
 <!-- 引入 -->
-<include src='../../otherpages/index/index.wxml' />
+<!-- <include src='../../otherpages/index/index.wxml' />
 
 <checkbox class='myClass__'>123123</checkbox>
 <view class='myClass'>123123</view>
@@ -21,4 +22,79 @@
 <view style='border: solid 5rpx #fff;  background-color: #eee'>PPP</view>
 
 <view class='myClass my_Class_'>PPP</view>
-<view class='common-view'>OPQRST</view>
+<view class='common-view'>OPQRST</view> -->
+
+<!-- <view style='display: flex'>
+<view style='background-color: red; flex-grow: 1; height: 80rpx;'></view>
+<view style='background-color: blue; flex-grow: 1; height: 80rpx;'></view>
+<view style='background-color: green; flex-grow: 1; height: 80rpx;'></view>
+</view> -->
+
+<!-- <view style='display: flex; height: 400rpx;'>
+<view style='background-color: red; width: 250rpx;  color: #fff'>1</view>
+<view style='flex-grow: 1; display: flex; flex-direction: column;'>
+<view style='flex-grow: 1; background-color: blue; color: #fff'>2</view>
+<view style='flex-grow: 1; background-color: green; color: #fff'>3</view>
+</view>
+</view> -->
+
+<!-- <view style='display: flex; flex-direction: column; height: 400rpx;'>
+<view style='background-color: red; height: 150rpx; color: #fff;'>1</view>
+<view style='flex-grow: 1; display: flex;'>
+<view style='flex-grow: 1; background-color: blue; color: #fff;'>2</view>
+<view style='flex-grow: 1; background-color: green; color: #fff;'>3</view>
+</view>
+</view> -->
+
+
+
+<!-- <scroll-view class='scroll-container' upper-threshold='0' lower-threshold='100' scroll-into-view='{{toView}}' bindscroll='scroll' bindscrolltolower='scrollToLower' bindscrolltoupper='scrollToUpper' scroll-y='true' > -->
+<!-- <scroll-view class='scroll-container' upper-threshold='0' lower-threshold='100' bindscroll='scroll' bindscrolltolower='scrollToLower' bindscrolltoupper='scrollToUpper' scroll-y='true' scroll-top='{{scrollTop}}'>
+
+<view id='item-1' class='scroll-item bg-red'>1</view>
+<view id='item-2' class='scroll-item bg-blue'>2</view>
+<view id='item-3' class='scroll-item bg-red'>3</view>
+<view id='item-4' class='scroll-item bg-blue'>4</view>
+<view id='item-5' class='scroll-item bg-red'>5</view>
+<view id='item-6' class='scroll-item bg-blue'>6</view>
+
+</scroll-view>
+
+<view class='act'>
+<button bindtap='scrollToTop'>点击滚动到顶部</button>
+</view> -->
+
+
+<!-- <swiper class='banner' indicator-dots='{{true}}' autoplay='{{autoplay}}' current='{{0}}' interval='{{2000}}' duration='{{1000}}' bindchange='change'>
+
+<block wx:for='{{sliderList}}' wx:for-item='item'>
+<swiper-item class='{{item.className}}'>{{item.name}}
+<view>内嵌视图</view>
+<button>按钮</button>
+</swiper-item> 
+</block>
+
+</swiper>
+
+<view>
+<button bindtap='play'>暂停|播放</button>
+</view> -->
+
+<!-- <view class='customSwiper'>
+<swiper class='banner' autoplay='{{true}}' interval='{{2000}}' duration='{{300}}' bindchange='switchTab'>
+
+<block wx:for='{{sliderList}}'>
+<swiper-item style='border: solid 1rpx; background-color: red;'>
+<image style="width:100%; height:100%;" src="{{item.imageSource}}"/>
+</swiper-item>
+</block>
+
+</swiper>
+
+<view class='tab'>
+<block wx:for='{{sliderList}}'>
+<view wx:if="{{item.selected}}" class="tab-item selected">{{index+1}}</view>
+<view wx:else class="tab-item">{{index+1}}</view> 
+</block>
+</view>
+</view> -->

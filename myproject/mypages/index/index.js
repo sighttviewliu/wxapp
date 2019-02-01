@@ -1,11 +1,11 @@
 // mypages/index/index.js
 
-var app = getApp();
-var pages = getCurrentPages();
-var currentPage = pages[pages.length - 1];
+// var app = getApp();
+// var pages = getCurrentPages();
+// var currentPage = pages[pages.length - 1];
 
 
-var myMod = require('mod.js');
+// var myMod = require('mod.js');
 
 Page({
 
@@ -13,14 +13,71 @@ Page({
    * Page initial data
    */
   data: {
-    count: 0
+  //   count: 0
+  // toView: 'item-3',
+  // scrollTop: 100
+
+  // autoplay: true,
+  // sliderList: [
+  //   { className: 'bg-red', name: 'slider1' },
+  //   { className: 'bg-blue', name: 'slider2' },
+  //   { className: 'bg-green', name: 'slider3' }
+  // ]
+  // sliderList: [
+  //   { selected: true, imageSource: '../../images/a.jpg' },
+  //   { selected: false, imageSource: '../../images/a.jpg' },
+  //   { selected: false, imageSource: '../../images/a.jpg' }
+  // ]
   },
 
-  countClick: function() {
-    this.setData({
-      count: this.data.count + 1
-    });
-  },
+// switchTab: function(e) {
+//   var _sliderList = this.data.sliderList;
+//   var i = 1;
+//   var item = _sliderList[0];
+//   for (i = 0; item = _sliderList[i]; ++i)
+//   {
+//     item.selected = e.detail.current == i;
+//     console.log(e.detail.current);
+//   }
+//   console.log(_sliderList);
+//   this.setData({
+//     sliderList: _sliderList
+//   });
+// },
+
+  // play: function() {
+  //   this.setData({
+  //     autoplay: !this.data.autoplay
+  //   });
+  // },
+
+  // change: function() {
+  //   console.log('执行切换')
+  // },
+
+  // scrollToUpper: function() {
+  //   console.log('触发滚动到顶部事件');
+  // }, 
+
+  // scrollToLower: function () {
+  //   console.log('触发滚动到底部事件');
+  // }, 
+
+  // scroll: function () {
+  //   console.log('触发滚动事件');
+  // }, 
+
+  // scrollToTop: function () {
+  //   this.setData({
+  //     scrollTop: '0'
+  //   });
+  // }, 
+
+  // countClick: function() {
+  //   this.setData({
+  //     count: this.data.count + 1
+  //   });
+  // },
 
   onPullDownRefresh: function() {
 
@@ -30,7 +87,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log(getApp().bbbb.dddd.eeee);
+    // console.log(getApp().bbbb.dddd.eeee);
 
   },
 
@@ -45,8 +102,8 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-    myMod.run('zhangsan');
-    myMod.walk('lisi');
+    // myMod.run('zhangsan');
+    // myMod.walk('lisi');
   },
 
   /**
