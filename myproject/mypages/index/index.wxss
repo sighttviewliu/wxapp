@@ -186,3 +186,34 @@ view.myClass::after {
   background-color: #fff;
   border-radius: 4rpx;
 } */
+
+/* .section {
+  padding: 10rpx;
+}
+
+.section.icon-wrapper {
+  height: 100rpx;
+  font-size: 12rpx;
+}
+
+.section .title {
+  font-size: 50rpx;
+} */
+
+/* .picker {
+  border: solid 1rpx #ddd;
+  background-color: #fafafa;
+  padding: 10rpx;
+} */
+
+/* .picker {
+  border: solid 1rpx #ddd;
+  background-color: #fafafa;
+  padding: 10rpx;
+} */
+
+/* .picker {
+  border: solid 1rpx #ddd;
+  background-color: #fafafa;
+  padding: 10rpx;
+} */

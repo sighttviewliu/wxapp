@@ -203,3 +203,35 @@
 <checkbox value='value-3' id='mycheckbox' style='font-size: 50rpx;'>不是内嵌的元素</checkbox>
 </checkbox-group>
 </view> -->
+
+<!-- <view class='section icon-wrapper'>
+<icon type='success' size='{{icon.size}}' style='opacity: {{icon.opacity/10}}' />
+</view>
+
+<view class='section'>
+<view class='title'>调整视图大小: </view>
+<slider show-value max='{{100}}' min='{{10}}' step='{{5}}' value='{{icon.size}}' bindchange='changeSize'></slider>
+</view>
+
+<view class='section'>
+<view class='title'>调整透明度: </view>
+<slider show-value max='{{10}}' min='{{0}}' step='{{1}}' value='{{icon.opacity}}' bindchange='changeOpacity'></slider>
+</view> -->
+
+<!-- <picker value='{{selectedIndex}}' range='{{list}}' bindchange='change'>
+<view class='picker'>
+当前选中：{{list[selectedIndex]}}
+</view>
+</picker> -->
+
+<!-- <picker value='{{selectTime}}' mode='time' start='{{startTime}}' end='endTime' bindchange='change'>
+<view class='picker'>
+当前选中：{{selectTime}}
+</view>
+</picker> -->
+
+<!-- <picker value='{{selectDate}}' mode='date' start='{{startDate}}' end='{{endDate}}' field='day' bindchange='change'>
+<view class='picker'>
+当前选中：{{selectDate}}
+</view>
+</picker> -->

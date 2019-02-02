@@ -66,8 +66,58 @@ Page({
 //     changeEventName: 'change'
 //   },
 // ]
-
+// icon: {
+//   size: 20,
+//   opacity: 8
+// }
+// list: [
+//   '值1',
+//   '值2',
+//   '值3'
+// ],
+// selectedIndex: 0
+// startTime: '00: 00',
+// endTime: '24:00',
+// selectTime: '11:30'
+startDate: '1970-01-01',
+endDate: '2099-12-31',
+selectDate: '2019-02-02'
   },
+
+  // change: function (e) {
+  //   console.log('... ... ... ... ... ... ...');
+  //   this.setData({
+  //     selectDate: e.detail.value
+  //   });
+  // },
+
+  // change: function (e) {
+  //   console.log('... ... ... ... ... ... ...');
+  //   this.setData({
+  //     selectTime: e.detail.value
+  //   });
+  // },
+
+// change: function(e) {
+//   console.log('... ... ... ... ... ... ...');
+//   this.setData({
+//     selectedIndex: e.detail.value
+//   });
+// },
+
+  // changeSize: function(e) {
+  //   this.data.icon.size = e.detail.value;
+  //   this.setData(
+  //     this.data
+  //   );
+  // },
+
+  // changeOpacity: function(e) {
+  //   this.data.icon.opacity = e.detail.value;
+  //   this.setData(
+  //     this.data
+  //   );
+  // },
 
 // checkboxchange: function(e) {
 //   console.log(e.detail.value);
