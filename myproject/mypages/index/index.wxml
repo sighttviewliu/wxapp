@@ -98,3 +98,108 @@
 </block>
 </view>
 </view> -->
+
+<!-- <view class='section size'>
+<view class='title'>图标大小展示</view>
+<view class='list'>
+<block wx:for='{{sizeList}}'>
+<view class='item'>
+<icon type='success_no_circle' size='{{item}}' />
+<label>{{item}}px</label>
+</view>
+</block>
+</view>
+</view>
+
+<view class='section'>
+<view class='title'>图标类型展示</view>
+<view class='list'>
+<block wx:for='{{typeList}}'>
+<view class='item'>
+<icon type='{{item}}' size='{{30}}' />
+<label>{{item}}px</label>
+</view>
+</block>
+</view>
+</view>
+
+<view class='section'>
+<view class='title'>图标颜色展示</view>
+<view class='list'>
+<block wx:for='{{colorList}}'>
+<view class='item'>
+<icon type='info' color='{{item}}' />
+<label>color: {{item}}</label>
+</view>
+</block>
+</view>
+</view> -->
+
+<!-- <icon class='myicon home' />
+<icon class='myicon arrow' />
+<icon class='myicon sun' />
+<icon class='myicon refresh' /> -->
+
+<!-- <text>{{content}}</text> -->
+
+<!-- <progress percent='{{20}}'></progress>
+<progress percent='{{30}}' show-info='{{true}}'></progress>
+<progress percent='{{40}}' stroke-width='{{40}}'></progress>
+<progress percent='{{percent}}' color='#CD5555'></progress>
+<progress percent='{{percent}}' active></progress>
+<button bindtap='click'>点击增加进度</button> -->
+
+<!-- <radio-group bindchange='changeChoosed'>
+<view wx:for='{{radios}}'>
+<radio value='{{item.value}}' checked='{{item.checked}}'>{{item.text}}</radio>
+</view>
+</radio-group> -->
+
+<!-- <checkbox-group bindchange='checkboxChange'>
+<view wx:for='{{countrys}}'>
+<checkbox value='{{item.value}}' checked='{{item.checked}}' disabled='{{item.disabled}}'>{{item.name}}</checkbox>
+</view>
+</checkbox-group> -->
+
+<!-- <view wx:for='{{switches}}'>
+  <switch data-name='{{item.name}}' type='{{item.type}}' checked='{{item.checked}}' bindchange='{{item.changeEventName}}'>
+  </switch>
+</view> -->
+
+<!-- <view class='section'>
+<checkbox-group bindchange='checkboxchange'>
+<label>
+<checkbox value='value-1' class='title'>点击文本也能选中checkbox以及事件</checkbox>
+</label>
+</checkbox-group>
+</view>
+
+<view class='section' class='title'>
+<label>
+<switch>点击文本也能切换开关</switch>
+</label>
+</view>
+
+<view class='section'>
+<view class='title'>选中元素内第一个</view>
+<checkbox-group bindchange='checkboxchange'>
+<label>
+<checkbox value='value-1' style='font-size: 50rpx;'>第1个</checkbox>
+<checkbox value='value-2' style='font-size: 50rpx;'>第2个</checkbox>
+<checkbox value='value-3' style='font-size: 50rpx;'>第3个</checkbox>
+<checkbox value='value-4' style='font-size: 50rpx;'>第4个</checkbox>
+<checkbox value='value-5' style='font-size: 50rpx;'>第5个</checkbox>
+</label>
+</checkbox-group>
+</view>
+
+<view class='section'>
+<view class='title'>for属性优先级大于内嵌</view>
+<checkbox-group bindchange='checkboxchange'>
+<label for='mycheckbox'>
+<checkbox value='value-1' style='font-size: 50rpx;'>内嵌第1元素</checkbox>
+<checkbox value='value-2' style='font-size: 50rpx;'>内嵌第2元素</checkbox>
+</label>
+<checkbox value='value-3' id='mycheckbox' style='font-size: 50rpx;'>不是内嵌的元素</checkbox>
+</checkbox-group>
+</view> -->

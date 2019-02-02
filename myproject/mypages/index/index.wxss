@@ -105,3 +105,84 @@ view.myClass::after {
 .tab .tab-item.selected {
   background-color: red;
 } */
+
+/* .section {
+  font-size: 12rpx;
+  padding: 10rpx;
+}
+
+.section .title {
+  font-size: 50rpx;
+}
+
+.section .list {
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.section .list .item {
+  width: 300rpx;
+  padding: 5rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.section.size .list .item {
+  width: 100rpx;
+  padding: 0rpx;
+}
+
+.section .list .item label {
+  text-align: center;
+}
+
+.section .list .item icon {
+  text-align: center;
+} */
+
+/* .myicon {
+  background-color: #f1f;
+  background-size: 1100rpx 826rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.myicon.arrow {
+  background-position: -90rpx -185rpx;
+}
+
+.myicon.home {
+  background-position: -520rpx -90rpx;
+}
+
+.myicon.sun {
+  background-position: -90rpx -575rpx;
+}
+
+.myicon.refresh {
+  background-position: -730rpx -476rpx;
+}
+
+.myicon {
+  margin-right: 20rpx;
+} */
+
+/* .section {
+  font-size: 12rpx;
+  padding: 20rpx 10rpx;
+  border-top: solid 1rpx #eee;
+}
+
+.section .title {
+  padding: 5rpx 0;
+  margin-bottom: 5rpx;
+  display: block;
+  font-size: 50rpx;
+}
+
+.section input {
+  border: solid 1rpx #ccc;
+  background-color: #fff;
+  border-radius: 4rpx;
+} */
