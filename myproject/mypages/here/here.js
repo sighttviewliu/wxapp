@@ -5,14 +5,16 @@ Page({
    * Page initial data
    */
   data: {
-
+    // query: {}
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    // console.log(options);
+    // this.data.query = options;
+    // this.setData(this.data);
   },
 
   /**

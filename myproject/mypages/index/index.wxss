@@ -217,3 +217,98 @@ view.myClass::after {
   background-color: #fafafa;
   padding: 10rpx;
 } */
+
+/* .custom-picker {
+  top: 100rpx;
+  width: 80%;
+  border: solid 1rpx #ccc;
+}
+
+.custom-picker .title {
+  text-align: center;
+  color: #444;
+  font-size: 24rpx;
+  background-color: #eee;
+  border-bottom: solid 1rpx #ccc;
+}
+
+.custom-picker picker-view {
+  height: 200rpx;
+}
+
+.custom-picker picker-view .cell {
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.custom-picker picker-view-column {
+  border-right: solid 1rpx #ccc;
+  position: relative;
+  left: 1rpx;
+} */
+
+/* .section {
+  font-size: 42rpx;
+  padding: 10rpx 5rpx;
+  border-bottom: dashed 1rpx #cecece;
+}
+
+.section input {
+  border: solid 1rpx #ccc;
+  padding: 0 5rpx;
+  background-color: #fff;
+  border-radius: 4rpx;
+  height: 30rpx;
+} */
+
+/* .section {
+  font-size: 42rpx;
+  padding: 10rpx 5rpx;
+  border-bottom: dashed 1rpx #cecece;
+}
+
+.section textarea {
+  border: solid 1rpx #ccc;
+  padding: 5rpx;
+  background-color: #fff;
+  border-radius: 4rpx;
+  height: 50rpx;
+}
+
+.section .textarea-holder {
+  color: red;
+} */
+
+/* button {
+  margin: 5rpx 0;
+}
+
+.my-button-hover {
+  background-color: red;
+  color: #fff;
+} */
+
+/* .section {
+  font-size: 42rpx;
+  padding: 10rpx;
+  border-top: solid 1rpx #eee;
+}
+
+.section input {
+  border: solid 1rpx #ccc;
+  border-radius: 4rpx;
+}
+
+.section button {
+  margin-bottom: 10rpx;
+}
+
+.section label {
+  margin-right: 20rpx;
+}
+
+.section .title {
+  margin: 5rpx 0;
+} */
+
+

@@ -91,7 +91,7 @@
 <text style='position: fixed; right: 10rpx; bottom: 10rpx; border: solid 1rpx;'>fixed</text>
 文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</view> -->
 
-<view class='mybox'>
+<!-- <view class='mybox'>
 <view class='myitem_1'>张三</view>
 <view class='myitem_1'>李四</view>
 <view class='myitem_1'>王五</view>
@@ -102,4 +102,10 @@
 <view class='myitem'>000000</view>
 <view class='myitem'>111111</view>
 <view class='myitem'>222222</view>
-</view>
+</view> -->
+
+<!-- <view>
+name: {{query.name}}, age: {{query.age}}
+</view> -->
+
+

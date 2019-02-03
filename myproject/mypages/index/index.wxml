@@ -235,3 +235,112 @@
 当前选中：{{selectDate}}
 </view>
 </picker> -->
+
+<!-- <view class='custom-picker'>
+<view class='title'>自定义滑动选择器</view>
+<picker-view indicator-style='height: 80rpx;' bindchange='changeTime'>
+<picker-view-column>
+<view class='cell' wx:for='{{list}}' wx:key='index'>
+{{item.date}}
+</view>
+</picker-view-column>
+<picker-view-column>
+<block wx:for='{{list}}' wx:key='{{index}}' wx:if='{{item.selected}}'>
+<view class='cell' wx:for='{{item.times}}' wx:for-index='subIndex' wx:for-item='subItem' wx:key='subIndex'>
+{{subItem.time}}
+</view>
+</block>
+</picker-view-column>
+</picker-view>
+</view> -->
+
+<!-- <view class='section'>
+<input placeholder='默认样式，自动聚焦' auto-focus></input>
+</view>
+
+<view class='section'>
+<input placeholder='内容123会被替换成0' bindinput='changeValue' type='number' maxlength='20'></input>
+</view>
+
+<view class='section'>
+<input placeholder='输入3个以上字符会收起键盘' bindinput='hideKeyboard' type='number'></input>
+</view> -->
+
+<!-- <view class='section'>
+<textarea bindblur='getValue' bindlinechange='lineChange' placeholder='请输入图案: ' placeholder-class='textarea-holder' auto-height maxlength='{{0}}'></textarea>
+</view> -->
+
+<!-- <button>默认按钮样式</button>
+<button size='mini'>size: mini</button>
+<button type='primary'>type: primary</button>
+<button type='warn'>type: warn</button>
+<button plain>plain</button>
+<button disabled>disabled</button>
+<button loading='{{true}}'>loading</button>
+<button hover-class='my-button-hover'>hover-class: my-button-hover</button>
+<button>
+<image src='https://media.tenor.com/images/a3c2a6cf42e0ac49ebd7cd347d10fe94/tenor.gif' />
+</button> -->
+
+
+<!-- <form bindsubmit='submit' bindreset='reset'>
+<view class='section'>
+<view class='title'>switch</view>
+<switch name='myswitch'></switch>
+</view>
+
+<view class='section'>
+<view class='title'>input</view>
+<input name='myinput' placeholder='请输入内容' value='{{textvalue}}'></input>
+</view>
+
+<view class='section'>
+<view class='title'>checkbox</view>
+<checkbox-group name='mycheckbox'>
+<label><checkbox value='1' />中国</label>
+<label><checkbox value='2' />美国</label>
+<label><checkbox value='3' />日本</label>
+</checkbox-group>
+</view>
+
+<view class='section'>
+<view class='title'>slider</view>
+<slider name='myslider' show-value></slider>
+</view>
+
+<view class='section'>
+<view class='title'>radio</view>
+<radio-group name='myradio'>
+<label>
+<radio value='0' />男
+<radio value='1' />女
+</label>
+</radio-group>
+</view>
+
+<view class='section'>
+<view class='title'>picker</view>
+<picker name='mypicker' range='{{times}}' value='{{index}}' bindchange='changePicker'>
+<view>时间: {{times[index]}} </view>
+</picker>
+</view>
+
+<view class='section'>
+<button type='primary' form-type='submit'>提交</button>
+<button form-type='reset'>重置</button>
+</view>
+</form> -->
+
+<!-- <view>
+name: {{query.name}}, age: {{query.age}}
+</view>
+
+<view style='border: solid 1rpx #a1a'>
+<navigator url='../here/here?name=zhangsan&age=18'>跳转到另一个界面</navigator>
+</view>
+<view style='border: solid 1rpx #1f1'>
+<navigator url='../here/here?name=zhangsan&age=18' hover-class='myhover' redirect>重定向到另一个界面</navigator>
+</view>
+<view style='border: solid 1rpx #de1'>
+<navigator url='./index?name=zhangsan&age=18' hover-class='myhover' redirect>刷新当前界面</navigator>
+</view> -->

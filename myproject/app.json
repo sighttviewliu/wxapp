@@ -13,37 +13,6 @@
     "backgroundTextStyle": "dark",
     "enablePullDownRefresh": true
   },
-  "tabBar": {
-    "color": "#000000",
-    "selectedColor": "#000000",
-    "backgroundColor": "#000000",
-    "list": [
-      {
-        "iconpath": "images/a.png",
-        "selectedIconPath": "images/b.png",
-        "pagePath": "mypages/index/index",
-        "text": "首页"
-      },
-      {
-        "iconpath": "images/a.png",
-        "selectedIconPath": "images/b.png",
-        "pagePath": "mypages/page2/mypagefilename",
-        "text": "中间"
-      },
-      {
-        "iconpath": "images/a.png",
-        "selectedIconPath": "images/b.png",
-        "pagePath": "otherpages/index/index",
-        "text": "其他"
-      },
-      {
-        "iconpath": "images/a.png",
-        "selectedIconPath": "images/b.png",
-        "pagePath": "mypages/here/here",
-        "text": "这里"
-      }
-    ]
-  },
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000,

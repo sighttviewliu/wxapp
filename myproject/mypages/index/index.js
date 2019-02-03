@@ -79,10 +79,102 @@ Page({
 // startTime: '00: 00',
 // endTime: '24:00',
 // selectTime: '11:30'
-startDate: '1970-01-01',
-endDate: '2099-12-31',
-selectDate: '2019-02-02'
+// startDate: '1970-01-01',
+// endDate: '2099-12-31',
+// selectDate: '2019-02-02'
+
+// list: [
+//   {
+//     date: '12月27日',
+//     selected: true,
+//     times: [{time: '19:00'}, {time: '19:30'}, {time: '20:00'}, {time: '20:30'}, {time: '21:00'}]
+//   },
+//   {
+//     date: '12月28日',
+//     selected: false,
+//     times: [{ time: '9:00' }, { time: '9:30' }, { time: '10:00' }, { time: '10:30' }, { time: '11:00' }]
+//   },
+//   {
+//     date: '12月29日',
+//     selected: false,
+//     times: [{ time: '12:00' }, { time: '12:30' }, { time: '13:00' }, { time: '14:30' }, { time: '15:00' }]
+//   }
+// ]
+
+// times:[
+// '20:00', '20:30', '21:00', '21:30', '22:00'
+// ],
+// index: 3
+// query: {}
+
   },
+
+
+// changePicker: function(e) {
+//   console.log(e.detail.value);
+//   this.setData({
+//     index: e.detail.value
+//   });
+// },
+
+// submit: function(e) {
+//   console.log(e.detail.value);
+// }, 
+
+// reset: function(e) {
+//   console.log(e.detail.value);
+//   console.log('重置');
+// },
+
+
+
+
+
+// getValue: function(e) {
+//   console.log(e.detail.value);
+// },
+
+//   lineChange: function (e) {
+    
+//     console.log(e.detail.height);
+//     console.log(e.detail.heightRpx);
+//     console.log(e.detail.lineCount);
+//   },
+
+
+  // changeValue: function(e) {
+  //   console.log(e.detail);
+  //   var value = e.detail.value,
+  //       pos = e.detail.cursor,
+  //       left;
+  //   if (pos != 1) {
+  //     left = value.slice(0,pos);
+  //     pos = left.replace(/123/g,'2').length;
+  //   }
+  //   return {
+  //     value: e.detail.value.replace(/123/g,'2'),
+  //     cursor: pos
+  //   }
+  // },
+
+  // hideKeyboard: function(e) {
+  //   if (e.detail.value.length >= 3) {
+  //     wx.hideKeyboard();
+
+  //   }
+  // },
+
+  // changeTime: function(e) {
+  //   console.log('.. .. .. .. .. .. .. .. ..');
+  //   var index = e.detail.value[0],
+  //       list  = this.data.list,
+  //       i,
+  //       d;
+  //   for (i = 0; d = list[i]; ++i) {
+  //     d.selected = i == index ? true : false;
+  //   }
+  //   this.setData(this.data);
+  // },
 
   // change: function (e) {
   //   console.log('... ... ... ... ... ... ...');
@@ -213,7 +305,8 @@ selectDate: '2019-02-02'
    */
   onLoad: function (options) {
     // console.log(getApp().bbbb.dddd.eeee);
-
+    // this.data.query = options;
+    // this.setData(this.data);
   },
 
   /**
