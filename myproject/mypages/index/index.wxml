@@ -344,3 +344,41 @@ name: {{query.name}}, age: {{query.age}}
 <view style='border: solid 1rpx #de1'>
 <navigator url='./index?name=zhangsan&age=18' hover-class='myhover' redirect>刷新当前界面</navigator>
 </view> -->
+
+<!-- <image style='width: 600rpx; height: 600rpx; background-color: #eeeeee;' mode='aspectFit' src='{{src}}' binderror='imageError' bindload='imageLoad'></image> -->
+
+<!-- <view>
+<view>
+<view class='section'>image</view>
+<view class='section'>图片</view>
+</view>
+<view>
+<view wx:for='{{array}}' wx:for-item='{{item}}'>
+<view class='section'>{{item.text}}</view>
+<view>
+<image style='width: 200rpx; height: 200rpx; background-color: #eeeeee;' mode='{{item.mode}}' src='{{src}}' binderror='imageError'></image>
+</view>
+</view>
+</view>
+</view> -->
+
+<!-- <audio poster='{{myaudio.poster}}' src='{{myaudio.src}}' name='{{myaudio.name}}' author='{{myaudio.author}}' controls loop action='{{myaudio.action}}'>
+</audio> -->
+
+<!-- <view class='video'>
+<video id='myVideo' src='{{src}}' danmu-list='{{danmu}}' enable-dammu controls></video>
+<view class='action'>
+<button bindtap='getVideo'>获取视频</button>
+<view class='danmu'>
+<input type='text' value='{{danmuText}}' bindblur='setInputValue'></input>
+<button bindtap='sendDanmu'>发送弹幕</button>
+</view>
+</view>
+</view> -->
+
+<!-- <map id='map' longitude='{{longitude}}' latitude='{{latitude}}' circles='{{circles}}' scale='14' controls='{{controls}}' bindcontroltap='controltap' markers='{{markers}}' bindmarkertap='markertap' polyline='{{polyline}}' bindregionchange='regionchange' show-location style='width: 100%; height: 300rpx;'></map> -->
+
+
+<!-- <canvas canvas-id='myCanvas' style='border: solid 1rpx #000; width: 100%; height: 300rpx;'></canvas> -->
+
+<!-- <contact-button session-from='weapp' style='margin: 100rpx;'></contact-button> -->

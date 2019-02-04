@@ -107,8 +107,151 @@ Page({
 // index: 3
 // query: {}
 
-  },
+    // array: [{
+    //   mode: 'scaleToFill',
+    //   text: 'scaleToFill：不保持纵横比缩放图片，使图片完全适应'
+    // }, {
+    //   mode: 'aspectFit',
+    //   text: 'aspectFit：保持纵横比缩放图片，使图片的长边能完全显示出来'
+    // }, {
+    //   mode: 'aspectFill',
+    //   text: 'aspectFill：保持纵横比缩放图片，只保证图片的短边能完全显示出来'
+    // }, {
+    //   mode: 'top',
+    //   text: 'top：不缩放图片，只显示图片的顶部区域'
+    // }, {
+    //   mode: 'bottom',
+    //   text: 'bottom：不缩放图片，只显示图片的底部区域'
+    // }, {
+    //   mode: 'center',
+    //   text: 'center：不缩放图片，只显示图片的中间区域'
+    // }, {
+    //   mode: 'left',
+    //   text: 'left：不缩放图片，只显示图片的左边区域'
+    // }, {
+    //   mode: 'right',
+    //   text: 'right：不缩放图片，只显示图片的右边边区域'
+    // }, {
+    //   mode: 'top left',
+    //   text: 'top left：不缩放图片，只显示图片的左上边区域'
+    // }, {
+    //   mode: 'top right',
+    //   text: 'top right：不缩放图片，只显示图片的右上边区域'
+    // }, {
+    //   mode: 'bottom left',
+    //   text: 'bottom left：不缩放图片，只显示图片的左下边区域'
+    // }, {
+    //   mode: 'bottom right',
+    //   text: 'bottom right：不缩放图片，只显示图片的右下边区域'
+    // }],
+    // src: '../../images/a.jpg'
 
+    // myaudio: {
+    //   src: '../../audios/abc.mp3',
+    //   poster: '../../images/a.jpg',
+    //   name: 'hula',
+    //   author: 'jake'
+    // }
+
+    // src: '../../videos/xyz.mp4',
+    // danmu: [
+    //   {
+    //     text: '第1秒出现的弹幕',
+    //     color: '#ff0000',
+    //     time: 1
+    //   },
+    //   {
+    //     text: '第2秒出现的弹幕',
+    //     color: '#00ff00',
+    //     time: 2
+    //   }
+    // ],
+    // danmuText: '',
+    // maxDuration: 0
+// latitude: 30.5491861989,
+// longitude: 104.0680165911,
+// scale: 5,
+// marker: [
+//   {
+//     iconPath: '../../images/a.jpg',
+//     id: 0,
+//     latitude: 30.5491861989,
+//     longitude: 104.0680165911,
+//     width: 30,
+//     height: 30
+//   },
+//   {
+//     iconPath: '../../images/a.jpg',
+//     id: 1,
+//     latitude: 30.5468832268,
+//     longitude: 104.0568588833,
+//     width: 30,
+//     height: 30
+//   },
+// ],
+// polyline: [{
+//   points: [
+//   {
+//     latitude: 30.5491861989,
+//     longitude: 104.0680165911
+//   },
+//   {
+//     latitude: 30.5468832268,
+//     longitude: 104.0568588833,
+//   },
+//   {
+//     latitude: 30.5470634483,
+//     longitude: 104.0688698344,
+//   },
+//   {
+//     latitude: 30.5468832268,
+//     longitude: 104.0568588833,
+//   }
+// ],
+// color: '#0000ffdd',
+// width: 2,
+// dottedLine: true
+// }],
+// controls:[
+//   {
+//     id: 1,
+//     iconPath: '../../images/a.jpg',
+//     position: {
+//       left: 0,
+//       top: 250,
+//       width: 30,
+//       height: 30
+//     },
+//     clickable: true
+//   }
+// ]
+
+
+
+},
+
+
+
+// regionchange(e) {
+//   console.log(e.type);
+// },
+
+//   markertap(e) {
+//     console.log(e.markerId);
+//   },
+
+//   controltap(e) {
+//     console.log(e.controlId);
+//   },
+
+  // imageError: function (e) {
+  //   console.log(e.detail.errMsg);
+  // },
+
+  // imageLoad: function(e) {
+  //   console.log(e.detail.height);
+  //   console.log(e.detail.width);
+  // },
 
 // changePicker: function(e) {
 //   console.log(e.detail.value);
@@ -313,8 +456,49 @@ Page({
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
+    // this.videoContext = wx.createVideoContext('myVideo', this);
 
+    // var context = wx.createContext();
+    // context.setStrokeStyle('#0000ff');
+    // context.setLineWidth(5);
+    // context.rect(3,2,150,200);
+    // context.stroke();
+    // wx.drawCanvas({
+    //   canvasId: 'myCanvas',
+    //   actions: context.getActions()
+    // });
+    // console.log('....');
   },
+
+  // getVideo: function() {
+  //   var self = this;
+  //   wx.chooseVideo({
+  //     success: function(res) {
+  //       self.setData({
+  //         maxDuration: 60,
+  //         src: res.tempFilePath
+  //       });
+  //     }
+  //   });
+  // },
+
+  // setInputValue: function(e) {
+  //   this.setData({
+  //     danmuText: e.detail.value
+  //   });
+  // },
+
+  // sendDanmu: function() {
+  //   var danmuText = this.data.danmuText;
+  //   console.log(this.videoContext);
+  //   this.videoContext.sendDanmu({
+  //     text: danmuText,
+  //     color: '#ff0000'
+  //   });
+  //   this.setData({
+  //     danmuText: ''
+  //   });
+  // },
 
   /**
    * Lifecycle function--Called when page show
