@@ -382,3 +382,6 @@ name: {{query.name}}, age: {{query.age}}
 <!-- <canvas canvas-id='myCanvas' style='border: solid 1rpx #000; width: 100%; height: 300rpx;'></canvas> -->
 
 <!-- <contact-button session-from='weapp' style='margin: 100rpx;'></contact-button> -->
+
+<!-- <button bindtap='myrequest'>点击请求后端服务器</button>
+<view>{{content}}</view> -->

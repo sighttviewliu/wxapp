@@ -226,11 +226,139 @@ Page({
 //   }
 // ]
 
+// content: ''
 
 
 },
 
+// myrequest: function() {
 
+//   var socketOpen = false;
+//   var socketMsgQueue = [];
+
+//   wx.connectSocket({
+//     url: 'wss://michaellaoliu.applinzi.com',
+//     data: {
+//       myData: 'data'
+//     },
+//     header: {
+//       'Content-Type': 'application/json'
+//     },
+//     method: 'GET'
+//   });
+
+//   wx.onSocketOpen(function(res) {
+//     console.log('连接已开');
+//     socketOpen = true;
+//     for (var i = 0, msg; msg = socketMsgQueue[i]; ++i)
+//     {
+//       sendMsg(msg);
+//     }
+//     socketMsgQueue = [];
+//   });
+
+//   wx.onSocketError(function (res) {
+//     console.log('连接开启失败');
+//   });
+
+//   function sendMsg(msg) {
+//     if (!socketOpen) {
+//       socketMsgQueue.push(msg);
+//       return;
+//     }
+//     wx.sendSocketMessage({
+//       data: msg,
+//     });
+//   }
+
+//   sendMsg({myName: 'weixin'});
+
+//   wx.onSocketMessage(function(res){
+//     console.log('收到服务器内容: ' + res.data);
+//   });
+  
+//   wx.closeSocket();
+
+//   wx.onSocketClose(function(){
+//     console.log('ws已经关闭');
+//   });
+// },
+
+// myrequest: function() {
+//   var self = this;
+//   wx.downloadFile({
+//     url: 'https://michaellaoliu.applinzi.com',
+//     success: function(res) {
+//       wx.getImageInfo({
+//         src: res.tempFilePaths[0],
+//         success: function(info){
+//           console.log(info.width + ',' + info.height);
+//           self.setData({
+//             content: info.width + ',' + info.height
+//           });
+//         }
+//       });
+//     }
+//   });
+// },
+
+  // myrequest: function () {
+  //   var self = this;
+
+  //   wx.chooseImage({
+  //     success: function(res) {
+  //       var tempFilePaths = res.tempFilePaths;
+  //       wx.uploadFile({
+  //         url: 'https://michaellaoliu.applinzi.com',
+  //         filePath: tempFilePaths[0],
+  //         name: 'myFile',
+  //         formData: {
+  //           'k': 'v'
+  //         },
+  //         success: function(response) {
+  //           console.log(response);
+  //           self.setData({
+  //             content: '成功' + response + 'file: ' + tempFilePaths[0]
+  //           });
+  //         },
+  //         fail: function(response) {
+  //           console.log(response);
+  //           self.setData({
+  //             content: '失败' + response
+  //           });
+  //         },
+  //         complete: function() {
+  //           console.log('无论成功失败都会执行');
+  //         }
+  //       })
+  //     },
+  //   });
+  // },
+
+// myrequest: function() {
+// var self = this;
+// wx.request({
+//   url: 'https://michaellaoliu.applinzi.com',
+//   header: {
+//     'Content-Type': 'application/json'
+//   },
+//   success: function(e) {
+//     console.log('成功后执行:' + e);
+//     self.setData({
+//       content: '成功后执行[' + e.errMsg + ']|[' + e.data + ']'
+//     });
+//   },
+//   fail: function(e) {
+//     console.log('失败后执行' + e);
+//     self.setData({
+//       content: '失败后执行[' + e.errMsg + ']|[' + e.data + ']'
+//     });
+//   },
+//   complete: function() {
+//     console.log('无论成功失败都会执行');
+//   }
+// });
+// },
 
 // regionchange(e) {
 //   console.log(e.type);
