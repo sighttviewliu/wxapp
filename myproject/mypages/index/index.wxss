@@ -350,3 +350,27 @@ view.myClass::after {
 } */
 
 
+/* .custom-audio {
+  width: 500rpx;
+  border: solid 1rpx #ccc;
+  border-bottom: 0;
+  margin: 60rpx auto;
+}
+
+.custom-audio .poster {
+  width: 80%;
+  border-radius: 50%;
+  margin: 10%;
+}
+
+.custom-audio .actions view {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border: solid 1rpx #ccc;
+  border-width: 1rpx 0rpx;
+  background: -webkit-gradient(linear, 0% 0% 0% 100%, from(#fff), to(#eee));
+  margin-top: 10rpx;
+} */
+
+

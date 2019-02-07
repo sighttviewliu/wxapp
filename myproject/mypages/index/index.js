@@ -228,8 +228,248 @@ Page({
 
 // content: ''
 
+// src: '',
+// info: '',
+// tempPath: ''
+// status: '',
+// event_status: ''
+
+
+    // audioSrc: 'http://ra01.sycdn.kuwo.cn/resource/n3/32/56/3260586875.mp3',
+    // coverSrc: 'http://wx4.sinaimg.cn/mw690/6a04b428gy1fvi7c6c0rpg20aa08cwhf.gif'
+
+// tempFilePath: ''
 
 },
+
+// choose: function() {
+//   var self = this;
+//   wx.chooseVideo({
+//     sourceType: ['album', 'camera'],
+//     camera: ['front', 'back'],
+//     success: function(res) {
+//       console.log(res.tempFilePath);
+//       //self.data.tempFilePath = res.tempFilePath;
+//       self.setData({
+//         tempFilePath: res.tempFilePath
+//       });
+//     }
+//   });
+// },
+
+  // regbgAudioEvent: function() {
+  //   var self = this;
+  //   wx.onBackgroundAudioPause(function() {
+  //     self.setData({
+  //       event_status: '事件-暂停'
+  //     });
+  //   });
+  //   wx.onBackgroundAudioPlay(function () {
+  //     self.setData({
+  //       event_status: '事件-播放'
+  //     });
+  //   });
+  //   wx.onBackgroundAudioStop(function () {
+  //     self.setData({
+  //       event_status: '事件-停止'
+  //     });
+  //   });
+  // },
+
+  // playbgAudio: function() {
+  //   var self = this;
+  //   wx.playBackgroundAudio({
+  //     dataUrl: 'http://ra01.sycdn.kuwo.cn/resource/n3/32/56/3260586875.mp3',
+  //     title: '我的音乐',
+  //     coverImgUrl: 'http://wx4.sinaimg.cn/mw690/6a04b428gy1fvi7c6c0rpg20aa08cwhf.gif',
+  //     success: function(res) {
+  //       self.setData({
+  //         status: '播放-成功'
+  //       });
+  //     },
+  //     fail: function(res) {
+  //       self.setData({
+  //         status: '播放-失败'
+  //       });
+  //     },
+  //     complete: function() {
+  //       console.log('...');
+  //     }
+  //   });
+  // },
+
+  // pausebgAudio: function() {
+  //   var self = this;
+  //   // wx.pauseBackgroundAudio();
+  //   // self.setData({
+  //   //   status: '暂停-成功'
+  //   // });
+  //   wx.pauseBackgroundAudio({
+  //     success: function (res) {
+  //       self.setData({
+  //         status: '暂停-成功'
+  //       });
+  //     },
+  //     fail: function (res) {
+  //       self.setData({
+  //         status: '暂停-失败'
+  //       });
+  //     },
+  //     complete: function () {
+  //     }
+  //   });
+  // },
+
+  // forwardbgAudio: function() {
+  //   var self = this;
+  //   wx.getBackgroundAudioPlayerState({
+  //     success: function (res) {
+  //       var currentPosition = res.currentPosition;
+  //       wx.seekBackgroundAudio({
+  //         position: currentPosition + 10
+  //       });
+  //       self.setData({
+  //         status: '快进-成功 现在位置: ' + '[' + currentPosition + ']'
+  //       });
+  //     },
+  //     fail: function (res) {
+  //       self.setData({
+  //         status: '快进-失败'
+  //       });
+  //     },
+  //     complete: function () {
+  //     }
+  //   });
+  // },
+
+  // backbgAudio: function () {
+  //   var self = this;
+  //   wx.getBackgroundAudioPlayerState({
+  //     success: function (res) {
+  //       var currentPosition = res.currentPosition;
+  //       wx.seekBackgroundAudio({
+  //         position: currentPosition - 10
+  //       });
+  //       self.setData({
+  //         status: '后退-成功 现在位置: ' + '[' + currentPosition + ']'
+  //       });
+  //     },
+  //     fail: function (res) {
+  //       self.setData({
+  //         status: '后退-失败'
+  //       });
+  //     },
+  //     complete: function () {
+  //     }
+  //   });
+  // },
+
+  // stopbgAudio: function () {
+  //   var self = this;
+  //   wx.stopBackgroundAudio({
+  //     success: function (res) {
+  //       self.setData({
+  //         status: '停止-成功'
+  //       });
+  //     },
+  //     fail: function (res) {
+  //       self.setData({
+  //         status: '停止-失败'
+  //       });
+  //     },
+  //     complete: function () {
+  //     }
+  //   });
+  // },
+
+// getAudio: function() {
+//   var self = this;
+//   console.log('+++++');
+//   wx.getBackgroundAudioPlayerState({
+//     success: function(res) {
+//       var statusText = {
+//         2: '没有播放任何音乐',
+//         1: '播放中',
+//         0: '暂停'
+//       }
+//       console.log(statusText[res.status]);
+//       console.log('-----');
+//       self.setData({
+//         status: statusText[res.status]
+//       });
+//     },
+//     fail: function(res) {
+//       console.log(res.errMsg);
+//     },
+//     complete: function() {
+//       console.log('Any called');
+//     }
+//   });
+// },
+
+// startRecord: function() {
+//   var self = this;
+//   wx.startRecord({
+//     success: function(res) {
+//       self.setData({
+//         tempPath: res.tempFilePath
+//       });
+//       wx.playVoice({
+//         filePath: res.tempFilePath
+//       });
+//     },
+//     fail: function(res) {
+//       self.setData({
+//         tempPath: '错误'
+//       });
+//     },
+//     complete: function() {
+//       console.log('无论如何都会执行');
+//     }
+//   });
+//   setTimeout(function() {
+//     //wx.stopRecord();
+//     wx.pauseVoice();
+//   }, 5*1000);
+// },
+
+// chooseImage: function() {
+//   var self = this;
+//   wx.chooseImage({
+//     count: 1,
+//     sizeType: ['original', 'compressed'],
+//     sourceType: ['album', 'camera'],
+//     success: function(res) {
+//       console.log(res.tempFilePaths);
+//       wx.getImageInfo({
+//         src: res.tempFilePaths[0],
+//         success: function(info) {
+//           console.log(info);
+//           self.setData({
+//             info: 'height=' + info.height + ',\n' + 
+//                   'width=' + info.width + ',\n' + 
+//                   'type=' + info.type + ',\n' + 
+//                   'path=' + info.path
+
+//           });
+//         }
+//       })
+//       self.setData({
+//         src: res.tempFilePaths
+//       });
+//     }
+//   });
+// },
+
+// prevImage: function() {
+//   wx.previewImage({
+//     current: 'http://wx4.sinaimg.cn/mw690/6a04b428gy1fvi7c6c0rpg20aa08cwhf.gif',
+//     urls: [
+//       'http://wx4.sinaimg.cn/mw690/6a04b428gy1fvi7c6c0rpg20aa08cwhf.gif',
+//       'http://wx4.sinaimg.cn/mw690/6a04b428gy1fvi7c5yt60g20aa06u0vy.gif'
+//     ],
+//   })
+// },
 
 // myrequest: function() {
 
@@ -583,7 +823,7 @@ Page({
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady: function () {
+  onReady: function (e) {
     // this.videoContext = wx.createVideoContext('myVideo', this);
 
     // var context = wx.createContext();
@@ -596,7 +836,50 @@ Page({
     //   actions: context.getActions()
     // });
     // console.log('....');
+
+    // this.audioContext = wx.createAudioContext('myAudio', this);
+    // this.audioContext.setSrc(this.data.audioSrc);
+
+    // this.videoContext =wx.createVideoContext('myVideo', this);
   },
+
+  // play: function() {
+  //   this.videoContext.play();
+  // },
+  // pause: function() {
+  //   this.videoContext.pause();
+  // },
+  // restart: function() {
+  //   this.videoContext.seek(0);
+  // },
+  // sendDanmu: function() {
+  //   this.videoContext.sendDanmu({
+  //     text: '弹幕文案',
+  //     color: '#ff0000'
+  //   });
+  // },
+
+  // action: function(e) {
+  //   var type = e.target.dataset.type,
+  //       audioContext = this.audioContext;
+  //   switch (type){
+  //     case 'play':
+  //     audioContext.play();
+  //     break;
+  //     case 'pause':
+  //     audioContext.pause();
+  //     break;
+  //     case 'seek':
+  //     audioContext.seek(30*1);
+  //     break;
+  //     case 'reset':
+  //     audioContext.seek(0);
+  //     break;
+  //     default:
+  //     audioContext.stop();
+  //     break;
+  //   }
+  // },
 
   // getVideo: function() {
   //   var self = this;

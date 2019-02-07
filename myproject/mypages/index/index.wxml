@@ -385,3 +385,43 @@ name: {{query.name}}, age: {{query.age}}
 
 <!-- <button bindtap='myrequest'>点击请求后端服务器</button>
 <view>{{content}}</view> -->
+
+<!-- <view>
+<image src='{{src}}'></image>
+<button bindtap='chooseImage'>选择图片</button>
+<!-- <button bindtap='prevImage'>预览图片</button> -->
+<!-- <view>{{info}}</view> -->
+<!-- </view> -->
+
+<!-- <view>
+<button bindtap='regbgAudioEvent'>注册3个事件</button>
+<button bindtap='playbgAudio'>播放</button>
+<button bindtap='pausebgAudio'>暂停</button>
+<button bindtap='forwardbgAudio'>快进10秒</button>
+<button bindtap='backbgAudio'>后退10秒</button>
+<button bindtap='stopbgAudio'>停止</button>
+<view>tap: {{status}}</view>
+<view>event: {{event_status}}</view>
+</view> -->
+
+<!-- <view class='custom-audio'>
+<audio id='myAudio' style='display: none;'></audio>
+<image class='poster' mode='widthFix' src='{{coverSrc}}'></image>
+<view class='actions' bindtap='action'>
+<view data-type='play'>播放</view>
+<view data-type='pause'>暂停</view>
+<view data-type='seek'>跳30s</view>
+<view data-type='reset'>重头播</view>
+</view>
+</view> -->
+
+<!-- <view>
+<button bindtap='choose'>选择视频</button>
+<view>{{tempFilePath}}</view>
+</view> -->
+
+<!-- <video id='myVideo' src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'></video>
+<button bindtap='play'>播放</button>
+<button bindtap='pause'>暂停</button>
+<button bindtap='restart'>重置</button>
+<button bindtap='sendDanmu'>发送弹幕</button> -->
