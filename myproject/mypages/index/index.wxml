@@ -425,3 +425,37 @@ name: {{query.name}}, age: {{query.age}}
 <button bindtap='pause'>暂停</button>
 <button bindtap='restart'>重置</button>
 <button bindtap='sendDanmu'>发送弹幕</button> -->
+
+
+<!-- <view>
+<button bindtap='save'>保存</button> -->
+<!-- <view>{{status[0]}}</view>
+<view>{{status[1]}}</view> -->
+<!-- <block wx:for='{{status}}' wx:for-item='item'>
+<view>{{item.filePath}}</view>
+</block> -->
+<!-- </view> -->
+
+<!-- <view>
+<button bindtap='openFile'>打开Office文件</button>
+</view> -->
+
+<!-- 
+<view>
+<button bindtap='cacheData'>缓存数据</button>
+<view>{{mydata}}</view>
+</view> -->
+
+<!-- <view>
+<button bindtap='location'>位置</button>
+<view>{{mydata}}</view>
+</view>  -->
+
+<!-- <map id='mymap' show-location></map>
+<button data-type='g' bindtap='action'>获取位置</button>
+<button data-type='l' bindtap='action'>移动位置</button> -->
+
+<!-- <view>
+<button bindtap='info'>设备信息</button>
+<view>{{mydata}}</view>
+</view> -->

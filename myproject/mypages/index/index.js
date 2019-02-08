@@ -240,7 +240,302 @@ Page({
 
 // tempFilePath: ''
 
+
+
+
+
+// status: []
+
+// mydata: '',
+// x: 0,
+// y: 0,
+// z: 0
+
 },
+
+// info: function() {
+//   var self = this;
+
+  // wx.getSystemInfo({
+  //   success: function(res) {
+  //     self.setData({
+  //       mydata: res.model + ',' + 
+  //               res.pixelRatio + ',' + 
+  //               res.windowHeight + ',' + 
+  //               res.windowWidth + ',' + 
+  //               res.language + ',' + 
+  //               res.system + ',' + 
+  //               res.platform
+  //     });
+  //   },
+  //   fail: function(res) {
+
+  //   },
+  //   complete: function() {
+
+  //   }
+  // });
+
+  // console.log(wx.getSystemInfoSync());
+
+  // wx.getNetworkType({
+  //   success: function(res) {
+  //     console.log(res.networkType);
+  //   },
+  //   fail: function(res) {
+
+  //   },
+  //   complete: function() {
+
+  //   }
+  // });
+
+  // var self = this;
+  // wx.onAccelerometerChange(function (res) {
+  //   self.setData({
+  //     // x:res.x,
+  //     // y:res.y,
+  //     // z:res.z
+  //     mydata: res.x + ',\n' + res.y + ',\n' + res.z
+  //   });
+  //   console.log(res.x + ',' + res.y + ',' + res.z);
+  // });
+
+  // wx.onCompassChange(function(res){
+  //   self.setData({
+  //     mydata: res.direction
+  //   });
+  // });
+
+  // wx.makePhoneCall({
+  //   phoneNumber: '15389299664',
+  // });
+
+  // wx.scanCode({
+  //   success: function(res) {
+  //     self.setData({
+  //       mydata: res.result + ',' +
+  //               res.scanType + ',' + 
+  //               res.charSet + ',' +
+  //               res.path
+  //     });
+  //   },
+  //   fail: function(res) {
+
+  //   },
+  //   complete: function() {
+
+  //   }
+  // });
+
+// },
+
+// location: function() {
+//   var self = this;
+
+//   wx.getLocation({
+//     // type: 'wgs84',
+//     type: 'gcj02',
+//     success: function(res) {
+//       console.log(res);
+//       self.setData({
+//         mydata: res.errMsg + ',' +
+//                 res.accuracy + ',' +
+//                 res.horizontalAccuracy + ',' + 
+//                 res.latitude + ',' + 
+//                 res.longitude + ',' + 
+//                 res.speed + ',' + 
+//                 res.verticalAccuracy
+//       });
+//       wx.openLocation({
+//         // latitude: res.latitude,
+//         // longitude: res.longitude,
+//         latitude: 34.2594667,
+//         longitude: 108.944831
+//       });
+//     },
+//     fail: function(res) {
+
+//     },
+//     complete: function() {
+
+//     }
+//   });
+
+  // wx.chooseLocation({
+  //   success: function(res) {
+  //     self.setData({
+  //       mydata: res.name + ',' +
+  //               res.address
+  //     });
+  //   },
+  //   fail: function(res) {
+
+  //   },
+  //   complete: function() {
+
+  //   }
+  // });
+
+// },
+
+
+// cacheData: function() {
+
+  // wx.setStorageSync('zhangsan', 'my name is zhangsan');
+
+  // wx.setStorage({
+  //   key: 'zhangsan',
+  //   data: 'my name is zhangsan',
+  // });
+
+  // wx.getStorage({
+  //   key: 'zhangsan',
+  //   success: function(res) {
+  //     console.log(res.data);
+  //   },
+  //   fail: function(res) {
+
+  //   },
+  //   complete: function() {
+
+  //   }
+  // });
+
+  // var ret = wx.getStorageSync('zhangsan');
+  // console.log(ret);
+
+  // wx.getStorageInfo({
+  //   success: function(res) {
+  //     console.log(res.keys);
+  //     for (var p in res.keys) {
+  //       console.log(p + ':' + wx.getStorageSync(res.keys[p]));
+  //     }
+  //     console.log(res.currentSize); //1
+  //     console.log(res.limitSize);//10240B
+  //   },
+  //   fail: function(res) {
+
+  //   },
+  //   complete: function() {
+
+  //   }
+  // });
+
+  // var ind, info = wx.getStorageInfoSync();
+  // console.log(ind);
+  // console.log(info);
+  // for (ind in info.keys) {
+  //   console.log(ind + ':' + wx.getStorageSync(info.keys[ind]));
+  // }
+
+  // wx.removeStorage({
+  //   key: 'zhangsan',
+  //   success: function(res) {
+  //     console.log(res.data);
+  //   },
+  // });
+
+//   var rett = wx.removeStorageSync('zhangsan');
+//   console.log(rett);
+
+//   wx.clearStorage();
+//   wx.clearStorageSync();
+
+// },
+
+
+
+// openFile: function() {
+//   var self = this;
+//   wx.downloadFile({
+//     url: 'https://michaellaoliu.applinzi.com/',
+//     success: function(res) {
+//       var filePath = res.filePath;
+//       wx.openDocument({
+//         filePath: filePath,
+//       });
+//     },
+//     fail: function(res) {
+
+//     },
+//     complete: function() {
+
+//     }
+//   });
+// },
+
+
+// save: function() {
+//   var self = this;
+  // wx.startRecord({
+  //   success: function(res) {
+  //     var tempFilePath = res.tempFilePath;
+  //     console.log(tempFilePath);
+  //     self.data.status[0] = tempFilePath;
+  //     self.setData(self.data);
+  //     wx.saveFile({
+  //       tempFilePath: tempFilePath,
+  //       success: function(res) {
+  //         var savedFilePath = res.savedFilePath;
+  //         console.log(savedFilePath);
+  //         self.data.status[1] = savedFilePath;
+  //         self.setData(self.data);
+  //       },
+  //       fail: function(res) {
+  //         console.log('...');
+  //       },
+  //       complete: function() {
+
+  //       }
+  //     })
+  //   },
+  //   fail: function(res) {
+  //     console.log('+++');
+  //   },
+  //   complete: function() {
+
+  //   }
+  // });
+  // setTimeout(function () {  
+  //   wx.stopRecord();
+  // }, 1*1000);
+
+  // wx.getSavedFileList({
+  //   success: function(res) {
+  //     for (var i = 0, file; file = res.fileList[i]; ++i)
+  //     {
+
+  //       wx.removeSavedFile({
+  //         filePath: file.filePath,
+  //       });
+  //       wx.getSavedFileInfo({
+  //         filePath: file.filePath,
+  //         success: function(res) {
+  //           console.log('文件大小: ' + res.size);
+  //         },
+  //         fail: function(res) {
+
+  //         },
+  //         complete: function() {
+
+  //         }
+  //       });
+  //       console.log('第' + i + '文件本地地址: ' + file.filePath);
+  //     }
+  //     self.data.status = res.fileList;
+  //     self.setData(self.data);
+  //   },
+  //   fail: function(res) {
+
+  //   },
+  //   complete: function() {
+
+  //   }
+  // });
+// },
+
+
 
 // choose: function() {
 //   var self = this;
@@ -841,7 +1136,41 @@ Page({
     // this.audioContext.setSrc(this.data.audioSrc);
 
     // this.videoContext =wx.createVideoContext('myVideo', this);
+
+    // this.mapContext = wx.createMapContext('mymap', this);
+
+
+    // var self = this;
+    // wx.onAccelerometerChange(function(res){
+    //   self.setData({
+    //     // x:res.x,
+    //     // y:res.y,
+    //     // z:res.z
+    //     mydata: res.x + ',\n' + res.y + ',\n' + res.z
+    //   });
+    //   console.log(res.x + ',' + res.y + ',' + res.z);
+    // });
+
   },
+
+
+  // action: function(e) {
+  //   var type = e.target.dataset.type,
+  //       mapContext = this.mapContext;
+
+  //   switch (type) {
+  //     case 'g':
+  //     mapContext.getCenterLocation({
+  //       success: function(res) {
+  //         console.log(res.latitude + ',' + res.longitude);
+  //       }
+  //     });
+  //     break;
+  //     case 'l':
+  //     mapContext.moveToLocation();
+  //     break;
+  //   }
+  // },
 
   // play: function() {
   //   this.videoContext.play();
