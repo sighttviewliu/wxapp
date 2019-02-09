@@ -251,7 +251,257 @@ Page({
 // y: 0,
 // z: 0
 
+// animData: {}
+
 },
+
+
+save: function() {
+var self = this;
+
+var canvasContext = wx.createCanvasContext('myCanvas', self);
+var linearGrandient, circularGrandient, colorStop; //这就是变换对象的引用
+//---------------------------------------------------------------
+  // canvasContext.setFillStyle('red');
+  // canvasContext.fillRect(10, 10, 110, 110);
+//---------------------------------------------------------------
+  // canvasContext.setFillStyle('red');
+  // canvasContext.fillRect(10, 10, 50, 50);
+
+  // canvasContext.setStrokeStyle('#0000ff');
+  // canvasContext.strokeRect(70, 10, 50, 50);
+
+  // canvasContext.setShadow(10, 10, 50, 'rgb(0,255,0)');
+  // canvasContext.fillRect(130, 10, 50, 50);
+//---------------------------------------------------------------
+  // linearGrandient = canvasContext.createLinearGradient(0,0,100,0);
+  // linearGrandient.addColorStop(0,'black');
+  // linearGrandient.addColorStop(1,'red');
+
+  // canvasContext.setFillStyle(linearGrandient);
+  // canvasContext.fillRect(10,10,100,100);
+
+  // circularGrandient = canvasContext.createCircularGradient(170,60,50);
+  // circularGrandient.addColorStop(0,'red');
+  // circularGrandient.addColorStop(0.16, 'orange');
+  // circularGrandient.addColorStop(0.33, 'yellow');
+  // circularGrandient.addColorStop(0.5, 'green');
+  // circularGrandient.addColorStop(0.66, 'cyan');
+  // circularGrandient.addColorStop(0.83, 'blue');
+  // circularGrandient.addColorStop(1, 'purple');
+
+  // canvasContext.setFillStyle(circularGrandient);
+  // canvasContext.fillRect(120,10,100,100);
+//---------------------------------------------------------------
+
+//---------------------------------------------------------------
+canvasContext.draw();
+
+wx.canvasToTempFilePath({
+  canvasId: 'myCanvas',
+  success: function(res) {
+    console.log('path = ' + res.tempFilePath);
+  },
+  fail: function(res) {
+  },
+  complete: function() {
+  }
+});
+
+},
+
+
+
+
+
+
+
+
+// rotateAndMove: function() {
+//   var anim = wx.createAnimation({
+//     duration: 5*1000,
+//     timingFunction: 'ease',
+//     //transformOrigin: '0 0',
+//     //delay: 10*1000,
+//     success: function(res) {
+//       console.log('创建动画实例成功');
+//     },
+//     fail: function(res) {
+//     },
+//     complete: function() {
+//     }
+//   });
+
+//   anim.translateY(100).rotate(720).step();
+//   this.setData({
+//     animData: anim.export()
+//   });
+// },
+
+// rotateThenMove: function() {
+//   var anim = wx.createAnimation({
+//     duration: 10*1000,
+//     timingFunction: 'ease',
+//     // transformOrigin: '0 0',
+//     // delay: 10*1000,
+//     success: function (res) {
+//       console.log('创建动画实例成功');
+//     },
+//     fail: function (res) {
+//     },
+//     complete: function () {
+//     }
+//   });
+
+//   anim.rotate(720).step({
+//     duration: 5*100,
+//   });
+
+//   anim.translateX(100).step({
+//     duration: 5 * 100,
+//   });
+
+//   anim.translateY(100).step({
+//     duration: 5 * 100,
+//   });
+
+//   this.setData({
+//     animData: anim.export()
+//   });
+// },
+
+
+
+
+
+
+// ccc:function(event) {
+//   var self = this,
+//       type = event.target.dataset.type;
+  
+//   switch (type) {
+//     case 'a1':
+//     wx.showToast({
+//       title: '内容',
+//       icon: 'success',
+//       duration: 10*1000,
+//       mask: false,
+//       success: function(res) {
+//         console.log('成功');
+//       },
+//       fail: function(res) {
+//       },
+//       complete: function() {
+//       }
+//     });
+//     break;
+//     case 'a2':
+//     wx.hideToast({
+//       success: function(res) {
+//         console.log('-成功');
+//       },
+//       fail: function(res) {
+
+//       },
+//       complete: function() {
+
+//       }
+//     });
+//     break;
+//     case 'a3':
+//     wx.showModal({
+//       title: '张三',
+//       content: '张三袜子里有钱',
+//       success: function(res) {
+//         if (!res.confirm) {
+//           console.log('取消');
+//           return;
+//         } 
+//         console.log('确认');
+//       },
+//       fail: function(res) {
+
+//       },
+//       complete: function() {
+
+//       }
+//     });
+//     break;
+//     case 'a4':
+//     var arr = ['张三', '李四', '王五', '陈六', '朱七', '何八'];
+//     wx.showActionSheet({
+//       itemList: arr,
+//       success: function(res) {
+//         if (!res.cancel) {
+//           console.log(arr[res.tapIndex]);
+//           return;
+//         }
+//         console.log('取消');
+//       },
+//       fail: function(res) {
+//       },
+//       complete: function() {
+//       }
+//     });
+//     break;
+//     case 'a5':
+//     wx.setNavigationBarTitle({
+//       title: '更新页面的导航的标题',
+//       success: function(res) {
+//         console.log(res.errMsg);
+//       },
+//       fail: function(res) {
+
+//       },
+//       complete: function() {
+
+//       }
+//     });
+//     break;
+//     case 'a6':
+//     wx.showNavigationBarLoading();
+//     break;
+//     case 'a7':
+//     wx.hideNavigationBarLoading();
+//     break;
+//     case 'a8':
+//     wx.navigateTo({
+//       url: '../here/here?key1=value1&key2=value2',
+//       success: function(res) {
+//       },
+//       fail: function(res) {
+//       },
+//       complete: function() {
+//       }
+//     });
+//     break;
+//     case 'a9':
+//     wx.redirectTo({
+//       url: './index?key1=value1&key2=value2',
+//       success: function (res) {
+//       },
+//       fail: function (res) {
+//       },
+//       complete: function () {
+//       }
+//     });
+//     break;
+//     case 'a10':
+//     wx.navigateBack({
+//       delta: 10
+//     });
+//     break;
+//     case 'a11':
+//     var animation = wx.createAnimation({
+//       transformOrigin: '0 0', //左上角为中心
+//       duration: 10*1000,
+//       timingFunction: 'ease-in',
+//       delay: 1*1000
+//     });
+//     break;
+
+//   }
+// },
 
 // info: function() {
 //   var self = this;
@@ -1113,6 +1363,7 @@ Page({
     // console.log(getApp().bbbb.dddd.eeee);
     // this.data.query = options;
     // this.setData(this.data);
+    console.log(options);
   },
 
   /**
@@ -1150,6 +1401,14 @@ Page({
     //   });
     //   console.log(res.x + ',' + res.y + ',' + res.z);
     // });
+
+
+    // var canvasContext = wx.createCanvasContext('myCanvas', this);
+
+    // canvasContext.setFillStyle('red');
+    // canvasContext.fillRect(10, 10, 110, 110);
+
+    // canvasContext.draw();
 
   },
 

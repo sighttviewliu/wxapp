@@ -15,6 +15,7 @@ Page({
     // console.log(options);
     // this.data.query = options;
     // this.setData(this.data);
+    // console.log(options);
   },
 
   /**
