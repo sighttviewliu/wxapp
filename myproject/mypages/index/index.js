@@ -7,6 +7,56 @@
 
 // var myMod = require('mod.js');
 
+var _fn;
+_fn = {
+  drawLine: function(canvasContext, start, end) {
+    canvasContext.beginPath();
+    canvasContext.moveTo(start[0],start[1]);
+    canvasContext.lineTo(end[0],end[1]);
+    canvasContext.stroke();
+  },
+
+  drawAngle: function(canvasContext, beginPoint) {
+    canvasContext.beginPath();
+    canvasContext.moveTo(beginPoint[0], beginPoint[1]);
+    canvasContext.lineTo(beginPoint[0] + 40, beginPoint[1] + 20);
+    canvasContext.lineTo(beginPoint[0], beginPoint[1] + 40);
+    canvasContext.stroke();
+  },
+
+  drawTrianglePath: function(canvasContext, beginPos) {
+    canvasContext.moveTo(beginPos[0],beginPos[1]);
+    canvasContext.beginPath();
+    canvasContext.lineTo(beginPos[0] + 30, beginPos[1] - 50);
+    canvasContext.lineTo(beginPos[0] + 60, beginPos[1]);
+    canvasContext.lineTo(beginPos[0], beginPos[1]);
+    canvasContext.closePath();
+  },
+
+  drawSectorPath: function(canvasContext, beginPos, radius, startAngle, endAngle) {
+    canvasContext.moveTo(beginPos[0], beginPos[1]);
+    canvasContext.beginPath();
+    canvasContext.lineTo(beginPos[0] + radius, beginPos[1]);
+    canvasContext.arc(beginPos[0], beginPos[1], radius, startAngle*Math.PI/180, endAngle*Math.PI/180);
+    canvasContext.lineTo(beginPos[0] + radius, beginPos[1]);
+    canvasContext.closePath();
+  },
+
+  drawQuadraticCurve: function(canvasContext, startPoint, controlPoint, endPoint) {
+    canvasContext.beginPath();
+    canvasContext.moveTo(startPoint[0], startPoint[1]);
+    canvasContext.quadraticCurveTo(controlPoint[0], controlPoint[1], endPoint[0], endPoint[1]);
+    //这里不需要关闭路径，我们不需要让这个曲线首尾相连闭合
+  },
+
+  drawBezierCurve: function(canvasContext, startPoint, controlPoint1, controlPoint2, endPoint) {
+    canvasContext.beginPath();
+    canvasContext.moveTo(startPoint[0], startPoint[1]);
+    canvasContext.bezierCurveTo(controlPoint1[0], controlPoint1[1], controlPoint2[0], controlPoint2[1], endPoint[0], endPoint[1]);
+    //这里不需要关闭路径，我们不需要让这个曲线首尾相连闭合
+  },
+}
+
 Page({
 
   /**
@@ -255,12 +305,13 @@ Page({
 
 },
 
+canvasContext: null,
 
 save: function() {
 var self = this;
 
 var canvasContext = wx.createCanvasContext('myCanvas', self);
-var linearGrandient, circularGrandient, colorStop; //这就是变换对象的引用
+// var linearGrandient, circularGrandient, colorStop; //这就是变换对象的引用
 //---------------------------------------------------------------
   // canvasContext.setFillStyle('red');
   // canvasContext.fillRect(10, 10, 110, 110);
@@ -293,9 +344,85 @@ var linearGrandient, circularGrandient, colorStop; //这就是变换对象的引
   // canvasContext.setFillStyle(circularGrandient);
   // canvasContext.fillRect(120,10,100,100);
 //---------------------------------------------------------------
+// canvasContext.setLineWidth(10);
+// canvasContext.setLineCap('square');
+// _fn.drawLine(canvasContext,[10,20],[150,20]);
+// canvasContext.setLineCap('butt');
+// _fn.drawLine(canvasContext,[10,40],[150,40]);
+// canvasContext.setLineCap('round');
+// _fn.drawLine(canvasContext,[10,60],[150,60]);
 
+// canvasContext.setLineCap('square');
+// canvasContext.setLineJoin('bevel');
+// _fn.drawAngle(canvasContext,[10,80]);
+// canvasContext.setLineJoin('round');
+// _fn.drawAngle(canvasContext, [50, 80]);
+// canvasContext.setLineJoin('miter');
+// _fn.drawAngle(canvasContext, [90, 80]);
+
+// canvasContext.setLineJoin('miter');
+// canvasContext.setMiterLimit(1);
+// _fn.drawAngle(canvasContext, [10,140]);
+// canvasContext.setMiterLimit(2);
+// _fn.drawAngle(canvasContext, [50,140]);
+// canvasContext.setMiterLimit(3);
+// _fn.drawAngle(canvasContext, [90,140]);
 //---------------------------------------------------------------
+// canvasContext.rect(10,10,30,30);
+// canvasContext.stroke();
+// canvasContext.draw();
+
+// canvasContext.rect(50,10,30,30);
+// canvasContext.fill();
+// canvasContext.draw(true);
+
+// canvasContext.fillRect(10,50,30,30);
+// canvasContext.draw(true);
+
+// canvasContext.strokeRect(50,50,30,30);
+// canvasContext.draw(true);
+
+// canvasContext.clearRect(25,25,40,40);
+// canvasContext.draw(true);
+//---------------------------------------------------------------
+// _fn.drawTrianglePath(canvasContext, [10,60]);
+// canvasContext.stroke();
+// canvasContext.draw();
+
+// _fn.drawSectorPath(canvasContext, [60,10],55,0,60);
+// canvasContext.setStrokeStyle('black');
+// canvasContext.setLineWidth(5);
+// canvasContext.setFillStyle('gray');
+// canvasContext.stroke();
+// canvasContext.fill();
+// canvasContext.draw(true);
+
+// canvasContext.setLineWidth(1);
+// _fn.drawQuadraticCurve(canvasContext,[10,70],[10,170],[100,70]);
+// canvasContext.stroke();
+// canvasContext.draw(true);
+
+// _fn.drawBezierCurve(canvasContext,[110,70],[110,150],[210,150],[210,70]);
+// canvasContext.stroke();
+// canvasContext.draw(true);
+//---------------------------------------------------------------
+// canvasContext.fillText('中文',10,20);
+// canvasContext.setFontSize(24);
+// canvasContext.setFillStyle('red');
+// canvasContext.fillText('English', 100, 20);
+// canvasContext.draw();
+//---------------------------------------------------------------
+canvasContext.setFillStyle('blue');
+canvasContext.fillRect(10,10,100,100);
+canvasContext.save();
+canvasContext.setGlobalAlpha(0.2);
+canvasContext.fillRect(50,50,100,100);
+canvasContext.restore();
+canvasContext.drawImage('http://wx4.sinaimg.cn/mw690/6a04b428gy1fvi7c6c0rpg20aa08cwhf.gif',100,100,200,200);
 canvasContext.draw();
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+// canvasContext.draw();
 
 wx.canvasToTempFilePath({
   canvasId: 'myCanvas',
@@ -309,6 +436,26 @@ wx.canvasToTempFilePath({
 });
 
 },
+
+// translate: function() {
+//   this.canvasContext.translate(10,10);
+// },
+
+// rotate: function() {
+//   this.canvasContext.rotate(30*Math.PI/180);
+// },
+
+// scale: function() {
+//   this.canvasContext.scale(2,2);
+// },
+
+// drawRect: function() {
+//   var context = this.canvasContext;
+//   context.restore();
+//   context.rect(0,0,15,15);
+//   context.stroke();
+//   context.draw(true);
+// },
 
 
 
@@ -1409,6 +1556,8 @@ wx.canvasToTempFilePath({
     // canvasContext.fillRect(10, 10, 110, 110);
 
     // canvasContext.draw();
+
+    this.canvasContext = wx.createCanvasContext('myCanvas', self);
 
   },
 
