@@ -7,55 +7,55 @@
 
 // var myMod = require('mod.js');
 
-var _fn;
-_fn = {
-  drawLine: function(canvasContext, start, end) {
-    canvasContext.beginPath();
-    canvasContext.moveTo(start[0],start[1]);
-    canvasContext.lineTo(end[0],end[1]);
-    canvasContext.stroke();
-  },
+// var _fn;
+// _fn = {
+//   drawLine: function(canvasContext, start, end) {
+//     canvasContext.beginPath();
+//     canvasContext.moveTo(start[0],start[1]);
+//     canvasContext.lineTo(end[0],end[1]);
+//     canvasContext.stroke();
+//   },
 
-  drawAngle: function(canvasContext, beginPoint) {
-    canvasContext.beginPath();
-    canvasContext.moveTo(beginPoint[0], beginPoint[1]);
-    canvasContext.lineTo(beginPoint[0] + 40, beginPoint[1] + 20);
-    canvasContext.lineTo(beginPoint[0], beginPoint[1] + 40);
-    canvasContext.stroke();
-  },
+//   drawAngle: function(canvasContext, beginPoint) {
+//     canvasContext.beginPath();
+//     canvasContext.moveTo(beginPoint[0], beginPoint[1]);
+//     canvasContext.lineTo(beginPoint[0] + 40, beginPoint[1] + 20);
+//     canvasContext.lineTo(beginPoint[0], beginPoint[1] + 40);
+//     canvasContext.stroke();
+//   },
 
-  drawTrianglePath: function(canvasContext, beginPos) {
-    canvasContext.moveTo(beginPos[0],beginPos[1]);
-    canvasContext.beginPath();
-    canvasContext.lineTo(beginPos[0] + 30, beginPos[1] - 50);
-    canvasContext.lineTo(beginPos[0] + 60, beginPos[1]);
-    canvasContext.lineTo(beginPos[0], beginPos[1]);
-    canvasContext.closePath();
-  },
+//   drawTrianglePath: function(canvasContext, beginPos) {
+//     canvasContext.moveTo(beginPos[0],beginPos[1]);
+//     canvasContext.beginPath();
+//     canvasContext.lineTo(beginPos[0] + 30, beginPos[1] - 50);
+//     canvasContext.lineTo(beginPos[0] + 60, beginPos[1]);
+//     canvasContext.lineTo(beginPos[0], beginPos[1]);
+//     canvasContext.closePath();
+//   },
 
-  drawSectorPath: function(canvasContext, beginPos, radius, startAngle, endAngle) {
-    canvasContext.moveTo(beginPos[0], beginPos[1]);
-    canvasContext.beginPath();
-    canvasContext.lineTo(beginPos[0] + radius, beginPos[1]);
-    canvasContext.arc(beginPos[0], beginPos[1], radius, startAngle*Math.PI/180, endAngle*Math.PI/180);
-    canvasContext.lineTo(beginPos[0] + radius, beginPos[1]);
-    canvasContext.closePath();
-  },
+//   drawSectorPath: function(canvasContext, beginPos, radius, startAngle, endAngle) {
+//     canvasContext.moveTo(beginPos[0], beginPos[1]);
+//     canvasContext.beginPath();
+//     canvasContext.lineTo(beginPos[0] + radius, beginPos[1]);
+//     canvasContext.arc(beginPos[0], beginPos[1], radius, startAngle*Math.PI/180, endAngle*Math.PI/180);
+//     canvasContext.lineTo(beginPos[0] + radius, beginPos[1]);
+//     canvasContext.closePath();
+//   },
 
-  drawQuadraticCurve: function(canvasContext, startPoint, controlPoint, endPoint) {
-    canvasContext.beginPath();
-    canvasContext.moveTo(startPoint[0], startPoint[1]);
-    canvasContext.quadraticCurveTo(controlPoint[0], controlPoint[1], endPoint[0], endPoint[1]);
-    //这里不需要关闭路径，我们不需要让这个曲线首尾相连闭合
-  },
+//   drawQuadraticCurve: function(canvasContext, startPoint, controlPoint, endPoint) {
+//     canvasContext.beginPath();
+//     canvasContext.moveTo(startPoint[0], startPoint[1]);
+//     canvasContext.quadraticCurveTo(controlPoint[0], controlPoint[1], endPoint[0], endPoint[1]);
+//     //这里不需要关闭路径，我们不需要让这个曲线首尾相连闭合
+//   },
 
-  drawBezierCurve: function(canvasContext, startPoint, controlPoint1, controlPoint2, endPoint) {
-    canvasContext.beginPath();
-    canvasContext.moveTo(startPoint[0], startPoint[1]);
-    canvasContext.bezierCurveTo(controlPoint1[0], controlPoint1[1], controlPoint2[0], controlPoint2[1], endPoint[0], endPoint[1]);
-    //这里不需要关闭路径，我们不需要让这个曲线首尾相连闭合
-  },
-}
+//   drawBezierCurve: function(canvasContext, startPoint, controlPoint1, controlPoint2, endPoint) {
+//     canvasContext.beginPath();
+//     canvasContext.moveTo(startPoint[0], startPoint[1]);
+//     canvasContext.bezierCurveTo(controlPoint1[0], controlPoint1[1], controlPoint2[0], controlPoint2[1], endPoint[0], endPoint[1]);
+//     //这里不需要关闭路径，我们不需要让这个曲线首尾相连闭合
+//   },
+// }
 
 Page({
 
@@ -303,14 +303,109 @@ Page({
 
 // animData: {}
 
+code: '',
+status: '',
+check: '',
+result: ''
+
 },
 
-canvasContext: null,
+login: function() {
+  var self = this;
+  wx.login({
+    success: function(res) {
+      if (!res.code) 
+      {
+        return;
+      }
+      console.log(res.code);
+      self.setData({
+        code: res.code
+      });
+      wx.request({
+        url: 'https://michaellaoliu.applinzi.com',
+        data: {
+          code: res.code
+        },
+        success: function(info) {
+          self.setData({
+            status: info.data
+          });
+        },
+        fail: function(info) {
 
-save: function() {
-var self = this;
+        },
+        complete: function() {
 
-var canvasContext = wx.createCanvasContext('myCanvas', self);
+        }
+      });
+    },
+    fail: function(res) {
+
+    },
+    complete: function(res) {
+
+    }
+  });
+
+  wx.checkSession({
+    success: function(res) {
+      console.log('成功');
+      self.setData({
+        check: '成功'
+      });
+    },
+    fail: function(res) {
+      console.log('失败');
+      self.setData({
+        check: '失败'
+      });
+    },
+    complete: function() {
+    }
+  });
+
+  wx.getUserInfo({
+    success: function(res) { 
+      console.log(res); 
+      self.setData({
+        result: res
+      });
+    },
+    fail: function(res) {
+      console.log(res);
+      self.setData({
+        result: res
+      });
+    },
+    complete: function() {}
+  });
+
+
+  wx.requestPayment({
+    timeStamp: '',
+    nonceStr: '',
+    package: '',
+    signType: '',
+    paySign: '',
+    success: function(res) {
+      console.log(res);
+    },
+    fail: function(res) {
+      console.log(res);
+    },
+    complete: function() {
+
+    }
+  });
+},
+
+// canvasContext: null,
+
+// save: function() {
+// var self = this;
+
+// var canvasContext = wx.createCanvasContext('myCanvas', self);
 // var linearGrandient, circularGrandient, colorStop; //这就是变换对象的引用
 //---------------------------------------------------------------
   // canvasContext.setFillStyle('red');
@@ -412,30 +507,30 @@ var canvasContext = wx.createCanvasContext('myCanvas', self);
 // canvasContext.fillText('English', 100, 20);
 // canvasContext.draw();
 //---------------------------------------------------------------
-canvasContext.setFillStyle('blue');
-canvasContext.fillRect(10,10,100,100);
-canvasContext.save();
-canvasContext.setGlobalAlpha(0.2);
-canvasContext.fillRect(50,50,100,100);
-canvasContext.restore();
-canvasContext.drawImage('http://wx4.sinaimg.cn/mw690/6a04b428gy1fvi7c6c0rpg20aa08cwhf.gif',100,100,200,200);
-canvasContext.draw();
+// canvasContext.setFillStyle('blue');
+// canvasContext.fillRect(10,10,100,100);
+// canvasContext.save();
+// canvasContext.setGlobalAlpha(0.2);
+// canvasContext.fillRect(50,50,100,100);
+// canvasContext.restore();
+// canvasContext.drawImage('http://wx4.sinaimg.cn/mw690/6a04b428gy1fvi7c6c0rpg20aa08cwhf.gif',100,100,200,200);
+// canvasContext.draw();
 //---------------------------------------------------------------
 //---------------------------------------------------------------
 // canvasContext.draw();
 
-wx.canvasToTempFilePath({
-  canvasId: 'myCanvas',
-  success: function(res) {
-    console.log('path = ' + res.tempFilePath);
-  },
-  fail: function(res) {
-  },
-  complete: function() {
-  }
-});
+// wx.canvasToTempFilePath({
+//   canvasId: 'myCanvas',
+//   success: function(res) {
+//     console.log('path = ' + res.tempFilePath);
+//   },
+//   fail: function(res) {
+//   },
+//   complete: function() {
+//   }
+// });
 
-},
+// },
 
 // translate: function() {
 //   this.canvasContext.translate(10,10);
@@ -1557,7 +1652,7 @@ wx.canvasToTempFilePath({
 
     // canvasContext.draw();
 
-    this.canvasContext = wx.createCanvasContext('myCanvas', self);
+    // this.canvasContext = wx.createCanvasContext('myCanvas', self);
 
   },
 
@@ -1688,6 +1783,10 @@ wx.canvasToTempFilePath({
    * Called when user click on the top right corner to share
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '标题',
+      desc: '描述',
+      path: '/here/here?key=value'
+    }
   }
 })
